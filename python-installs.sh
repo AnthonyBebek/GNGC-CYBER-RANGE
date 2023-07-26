@@ -25,7 +25,7 @@ install_python_dependencies() {
 
 install_other_dependencies() {
     echo "Installing other dependencies..."
-    sudo apt install mariadb-server
+    sudo apt install mariadb-server mariadb-client -y
 }
 
 read -p "Do you want to update apt and pip? (Recommended) (Y/N): " python_choice

@@ -6,6 +6,13 @@ This is the server files for a GNGC Cyber Range project, these files include cha
 
 These files will never be pushed towards development and are only used for a long project.
 
+
+### Setup
+Run these commands on a Ubuntu Linux PC with internet connection
+- git clone https://github.com/Fox2low/GNGC-CYBER-RANGE
+- bash python-installs.sh
+- bash start.sh
+
 ### Task list
 #### The GNGC Cyber Range - Tasklist
 - [x] Github Repository Setup
