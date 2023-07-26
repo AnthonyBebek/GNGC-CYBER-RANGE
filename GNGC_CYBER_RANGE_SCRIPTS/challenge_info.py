@@ -1,9 +1,8 @@
 import json
 
 def get_challenge_settings(challenge_name):
-    settings_file = "Admin_Settings.json"
+    settings_file = "../Admin_Settings.json"
 
-    # Read settings from the JSON file
     with open(settings_file, "r") as f:
         settings = json.load(f)
 

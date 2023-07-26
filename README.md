@@ -51,3 +51,13 @@ To edit settings for the challanges
 - [ ] Finished tasklist on Readme file
 
 
+### File Structure
+- GNGC_CYBER_RANGE_SCRIPTS
+    - Python scripts that hold external challanges
+- GNGC_CYBER_RANGE_WEBSITE
+    - Flask website
+    -   All HTML pages
+- Maintance_Scripts
+   - Setup scripts
+   - Debug scripts
+   - Server Maintance scripts

@@ -3,7 +3,6 @@ import threading
 import socket
 import sys
 
-# Global variable to control packet transmission
 transmit_packet = False
 
 def send_udp_packet(ip, port, message):
@@ -19,10 +18,10 @@ def send_udp_packet_periodically(ip, port, message, interval):
         time.sleep(interval)
 
 if __name__ == "__main__":
-    target_ip = "127.0.0.1"  # Replace this with the destination IP address
-    target_port = 12345      # Replace this with the destination port
+    target_ip = "127.0.0.1"  
+    target_port = 12345   
     message_to_send = "Hello!"
-    interval_seconds = 30    # Packet transmission interval in seconds
+    interval_seconds = 30    
 
     if len(sys.argv) != 2 or sys.argv[1] not in ["on", "off"]:
         print("Usage: python script_name.py [on|off]")
