@@ -1,8 +1,8 @@
 #!/bin/bash
 
-end_message(){
+end_message() {
     echo ""
-    echo "If there was an error then it's recommended to restart the script and agree to update installers"
+    echo "If there was an error, then it's recommended to restart the script and agree to update installers."
     echo ""
 }
 
@@ -10,6 +10,7 @@ update_installers() {
     echo "Updating Installers..."
     sudo apt update
     pip3 install --upgrade
+    end_message
 }
 
 install_python_dependencies() {
@@ -20,13 +21,11 @@ install_python_dependencies() {
     pip3 install sqlalchemy
     pip3 install re
     pip3 cache purge
-    end_message
 }
 
 install_other_dependencies() {
     echo "Installing other dependencies..."
     sudo apt install mariadb-server
-    end_message
 }
 
 read -p "Do you want to update apt and pip? (Recommended) (Y/N): " python_choice
@@ -37,10 +36,13 @@ fi
 read -p "Do you want to install Python dependencies? (Y/N): " python_choice
 if [[ "$python_choice" =~ ^[Yy]$ ]]; then
     install_python_dependencies
+    end_message
 fi
 
 read -p "Do you want to install other dependencies? (Y/N): " other_choice
 if [[ "$other_choice" =~ ^[Yy]$ ]]; then
     install_other_dependencies
+    end_message
 fi
+
 echo "Done!"
