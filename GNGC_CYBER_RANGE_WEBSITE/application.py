@@ -19,3 +19,5 @@ app.config['SESSION_TYPE'] = 'filesystem'
 login_manager = LoginManager()
 login_manager.init_app(app)
 
+@app.route('/')
+
