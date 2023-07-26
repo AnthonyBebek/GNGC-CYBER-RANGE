@@ -12,7 +12,7 @@ import os
 from werkzeug.security import generate_password_hash, check_password_hash
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='/TEMPLATES')
 app.secret_key = 'ballers'
 app.config['SESSION_PERMANANT'] = True
 app.config['SESSION_TYPE'] = 'filesystem'
