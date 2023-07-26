@@ -1,9 +1,3 @@
-**Table of Contents**
-
-[TOCM]
-
-[TOC]
-
 ### Overview
 
 This is the server files for a GNGC Cyber Range project, these files include challanges hosted on the server and any server maintance files.
