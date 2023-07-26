@@ -11,8 +11,7 @@ def check_python_imports(imports):
     return missing_imports
 
 if __name__ == "__main__":
-    required_imports = ["flask", "flask_login", "werkzeug", "sqlalchemy", "re", "socket", "sys", "os", "time", "threading
-    "]
+    required_imports = ["flask", "flask_login", "werkzeug", "sqlalchemy", "re", "socket", "sys", "os", "time", "threading"]
     missing_modules = check_python_imports(required_imports)
 
     if missing_modules:
