@@ -20,12 +20,18 @@ install_python_dependencies() {
     pip3 install werkzeug
     pip3 install sqlalchemy
     pip3 install re
+    pip3 install socket
+    pip3 install sys
+    pip3 install os
+    pip3 install time
+    pip3 install threading
     pip3 cache purge
 }
 
 install_other_dependencies() {
     echo "Installing other dependencies..."
     sudo apt install mariadb-server mariadb-client -y
+    sudo apt-get install -y iputils-ping
 }
 
 read -p "Do you want to update apt and pip? (Recommended) (Y/N): " python_choice
