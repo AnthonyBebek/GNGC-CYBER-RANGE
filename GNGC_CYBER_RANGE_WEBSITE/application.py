@@ -19,3 +19,12 @@ app.config['SESSION_TYPE'] = 'filesystem'
 login_manager = LoginManager()
 login_manager.init_app(app)
 
+
+#Feel Free to completely rip out all this, I know this will work but you are the expert so do it your way
+@app.route('/')
+@app.route('/index')
+def index():
+    return render_template('index.html')
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', debug=True)
