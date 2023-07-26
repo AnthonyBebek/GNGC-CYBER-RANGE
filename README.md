@@ -1,11 +1,13 @@
+
+
 ### Overview
 
 This is the server files for a GNGC Cyber Range project, these files include challanges hosted on the server and any server maintance files.
 
 These files will never be pushed towards development and are only used for a long project.
 
-###Task list
-####The GNGC Cyber Range - Tasklist
+### Task list
+#### The GNGC Cyber Range - Tasklist
 - [x] Github Repository Setup
 - [x] Github - VS Code Intergration Setup
 - [ ] Full Network Connectivity
@@ -33,7 +35,7 @@ These files will never be pushed towards development and are only used for a lon
     - [ ] Cryptography Challenges
 
 [comment]: <> (Please work on this Om)
-####GNGC Cyber Range Web Component - Tasklist
+#### GNGC Cyber Range Web Component - Tasklist
 - [x] Github Repository Setup
 - [x] Github - VS Code Intergration Setup
 - [ ] Finished tasklist on Readme file
