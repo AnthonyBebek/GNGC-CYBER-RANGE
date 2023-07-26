@@ -13,6 +13,9 @@ Run these commands on a Ubuntu Linux PC with internet connection
 - bash python-installs.sh
 - bash start.sh
 
+To edit settings for the challanges 
+- Navigate to GNGC-CYBER-RANGE/GNGC_CYBER_RANGE_SCRIPTS
+
 ### Task list
 #### The GNGC Cyber Range - Tasklist
 - [x] Github Repository Setup
