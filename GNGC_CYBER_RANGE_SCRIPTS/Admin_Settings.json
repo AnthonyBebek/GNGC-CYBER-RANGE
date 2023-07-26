@@ -1,0 +1,62 @@
+{
+    "Challenges": {
+
+      "Command Line": {
+
+        "Challange 1": {
+          "Challange_name": "Basic Commands",
+          "IP": "192.168.30.1",
+          "Port": 3306
+        }
+      },
+      "Web Challenges": {
+
+        "Challange 1": {
+          "Challange_name": "Web Basics",
+          "IP": "192.168.30.2",
+          "Port": 8080
+        }
+      },
+      "OINST Challenges": {
+
+        "Challange 1": {
+          "Challange_name": "Operating Systems",
+          "IP": "192.168.30.3",
+          "Port": 5555
+        }
+      },
+      "Networking Challenges": {
+
+        "Challange 1": {
+          "Challange_name": "Networking Concepts",
+          "IP": "192.168.30.4",
+          "Port": 12345
+        }
+      },
+      "Programming Challenges": {
+
+        "Challange 1": {
+          "Challange_name": "Python Basics",
+          "IP": "192.168.30.5",
+          "Port": 5000
+        }
+      },
+      "Digital Forensics Challenges": {
+
+        "Challange 1": {
+          "Challange_name": "Forensics Fundamentals",
+          "IP": "192.168.30.6",
+          "Port": 9999
+        }
+      },
+      "Cryptography Challenges": {
+        
+        "Challange 1": {
+          "Challange_name": "Cryptography 101",
+          "IP": "192.168.30.7",
+          "Port": 7777
+        }
+      }
+    }
+  }
+  

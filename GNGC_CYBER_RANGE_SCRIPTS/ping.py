@@ -3,6 +3,7 @@ import threading
 import socket
 import sys
 
+# Global variable to control packet transmission
 transmit_packet = False
 
 def send_udp_packet(ip, port, message):
