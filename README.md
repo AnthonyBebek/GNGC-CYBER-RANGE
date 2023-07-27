@@ -57,7 +57,7 @@ To shutdown server
     - [ ] Basic HTML and CSS
     - [ ] The structure of home page
 - [ ] Database
-    - [ ] Creating MariaDB database
+    - [x] Creating MariaDB database
     - [ ] Creating database model in sqlalchemy
 - [ ] Implementing features 
     - [ ] Login and signup 
