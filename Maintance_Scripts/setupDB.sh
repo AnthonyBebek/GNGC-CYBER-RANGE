@@ -2,7 +2,7 @@
 
 set_root_password() {
     mysqladmin -u root --password="GNGC-MYSQL" password "GNGC-MYSQL"
-    echo "Root password set successfully."
+    echo "Root password set successfully to 'GNGC-MYSQL'"
 }
 
 create_or_update_user() {
