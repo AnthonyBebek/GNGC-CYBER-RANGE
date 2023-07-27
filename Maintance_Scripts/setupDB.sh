@@ -2,17 +2,9 @@
 
 # Function to set the root password
 set_root_password() {
-    mysqladmin -u root password "GNGC-MYSQL"
+    mysql_config_editor set --login-path=local --user=root --password
+    mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'GNGC-MYSQL';"
     echo "Root password set successfully."
-}
-
-# Function to apply temporary MySQL configuration changes
-apply_mysql_config_fix() {
-    echo "Applying MySQL configuration fix..."
-    sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf.backup
-    sudo sh -c "echo '[mysqld]' >> /etc/mysql/mysql.conf.d/mysqld.cnf"
-    sudo sh -c "echo 'skip-grant-tables' >> /etc/mysql/mysql.conf.d/mysqld.cnf"
-    sudo systemctl restart mysql
 }
 
 # Function to create a new user or update the password if the user already exists
@@ -23,25 +15,14 @@ create_or_update_user() {
     echo "Creating new user: $current_user"
     echo "New password: $new_password"
 
-    mysql --user=root --password=GNGC-MYSQL <<MYSQL_SCRIPT
-CREATE OR REPLACE USER '$current_user'@'localhost' IDENTIFIED BY '$new_password';
-GRANT ALL PRIVILEGES ON *.* TO '$current_user'@'localhost';
-FLUSH PRIVILEGES;
-MYSQL_SCRIPT
+    mysql --login-path=local -e "CREATE OR REPLACE USER '$current_user'@'localhost' IDENTIFIED BY '$new_password';"
+    mysql --login-path=local -e "GRANT ALL PRIVILEGES ON *.* TO '$current_user'@'localhost';"
+    mysql --login-path=local -e "FLUSH PRIVILEGES;"
 
     echo ""
     echo "New account has been created or updated!"
 }
 
-# Function to revert MySQL configuration changes
-revert_mysql_config_fix() {
-    echo "Reverting MySQL configuration..."
-    sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf.backup /etc/mysql/mysql.conf.d/mysqld.cnf
-    sudo systemctl restart mysql
-}
-
 # Main script starts here
 set_root_password
-apply_mysql_config_fix
 create_or_update_user
-revert_mysql_config_fix
