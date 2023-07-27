@@ -9,3 +9,5 @@ from sqlalchemy.ext.associationproxy import association_proxy
 from database import *
 from sqlalchemy.orm import relationship
 
+
+class User(Base):

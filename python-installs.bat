@@ -5,3 +5,4 @@ pip install flask_login
 pip install werkzeug
 pip install sqlalchemy
 pip install re
+pip install PyMySQL
