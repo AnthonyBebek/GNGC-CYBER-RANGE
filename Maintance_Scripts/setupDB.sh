@@ -6,7 +6,7 @@ new_password="pass"
 echo "Creating new user: $current_user"
 echo "New password: $new_password"
 
-bash set_root_password.sh
+bash ./.set_root_password.sh
 
 user_exists=$(mysql --defaults-extra-file=<(echo -e "[client]\nuser=root\npassword=your_new_root_password") -N -s -e "SELECT EXISTS(SELECT 1 FROM mysql.user WHERE user = '$current_user' AND host = 'localhost');")
 
