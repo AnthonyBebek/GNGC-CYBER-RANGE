@@ -9,11 +9,15 @@ These files will never be pushed towards development and are only used for a lon
 ### Setup
 Run these commands on a Ubuntu Linux PC with internet connection
 - git clone https://github.com/Fox2low/GNGC-CYBER-RANGE
-- bash python-installs.sh
+- bash setup.sh
 - bash start.sh
 
 To edit settings for the challanges 
-- Navigate to GNGC-CYBER-RANGE/GNGC_CYBER_RANGE_SCRIPTS
+- Navigate to ~/GNGC-CYBER-RANGE/GNGC_CYBER_RANGE_SCRIPTS
+
+To shutdown server
+- stop.sh
+
 
 ### Task list
 #### The GNGC Cyber Range - Tasklist
@@ -48,6 +52,29 @@ To edit settings for the challanges
 - [x] Github Repository Setup
 - [x] Github - VS Code Intergration Setup
 - [ ] Finished tasklist on Readme file
+- [ ] Basic Frontned
+    - [ ] Website Design
+    - [ ] Basic HTML and CSS
+    - [ ] The structure of home page
+- [ ] Database
+    - [ ] Creating MariaDB database
+    - [ ] Creating database model in sqlalchemy
+- [ ] Implementing features 
+    - [ ] Login and signup 
+    - [ ] Basic home and dashboard page
+- [ ] Planning challenges
+    - [ ] Basic web based challanges planned out
+- [ ] Implementing challenges 
+    - [ ] HTML, CSS and JS challanges created and running
+    - [ ] Python challanges created and running
+- [ ] Cleaning and polishing
+    - [ ] Cleaning up code and making it more efficient
+    - [ ] Self testing to plug any leaks and protect from errors
+- [ ] User Testing
+    - [ ] Have a group of users test program
+    - [ ] From experienced cyber users to beginners
+    - [ ] Make improvements
+    - [ ] Final Checks
 
 
 ### File Structure
