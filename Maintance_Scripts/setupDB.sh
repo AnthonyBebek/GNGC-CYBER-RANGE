@@ -22,6 +22,9 @@ MYSQL_SCRIPT
     echo "New account has been created or updated!"
 }
 
-
 set_root_password
 create_or_update_user
+
+GRANT ALL PRIVILEGES ON *.* TO 'systems'@'%' IDENTIFIED BY 'pass';
+
+
