@@ -31,6 +31,10 @@ install_python_dependencies() {
 install_other_dependencies() {
     echo "Installing other dependencies..."
     sudo apt install mariadb-server mariadb-client -y
+    echo ""
+    echo "Configuring databse default Users"
+    echo ""
+    sudo ./Maintance_Scripts/setupDB.sh
     sudo apt-get install -y iputils-ping
 }
 
@@ -50,5 +54,10 @@ if [[ "$other_choice" =~ ^[Yy]$ ]]; then
     install_other_dependencies
     end_message
 fi
+
+echo ""
+echo "Setting up custom commands"
+echo ""
+source ./Maintance_Scripts/setupAlias.sh
 
 echo "Done!"

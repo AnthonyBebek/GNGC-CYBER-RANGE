@@ -9,11 +9,15 @@ These files will never be pushed towards development and are only used for a lon
 ### Setup
 Run these commands on a Ubuntu Linux PC with internet connection
 - git clone https://github.com/Fox2low/GNGC-CYBER-RANGE
-- bash python-installs.sh
+- bash setup.sh
 - bash start.sh
 
 To edit settings for the challanges 
-- Navigate to GNGC-CYBER-RANGE/GNGC_CYBER_RANGE_SCRIPTS
+- Navigate to ~/GNGC-CYBER-RANGE/GNGC_CYBER_RANGE_SCRIPTS
+
+To shutdown server
+- stop.sh
+
 
 ### Task list
 #### The GNGC Cyber Range - Tasklist
@@ -71,7 +75,6 @@ To edit settings for the challanges
     - [ ] From experienced cyber users to beginners
     - [ ] Make improvements
     - [ ] Final Checks
-
 
 
 ### File Structure
