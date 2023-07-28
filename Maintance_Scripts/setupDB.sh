@@ -4,11 +4,7 @@ sudo service mysql start
 echo ""
 
 set_root_password() {
-    sudo mysqld_safe --skip-grant-tables --skip-networking &
-    mysql -u root
-    FLUSH PRIVILEGES;
-    ALTER USER 'root'@'localhost' IDENTIFIED BY 'GNGC-MYSQL';
-    #mysqladmin -u root --password="GNGC-MYSQL" password "GNGC-MYSQL"
+    mysqladmin -u root --password="GNGC-MYSQL" password "GNGC-MYSQL"
     echo "Root password set successfully to 'GNGC-MYSQL'"
 }
 

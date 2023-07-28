@@ -56,6 +56,8 @@ install_other_dependencies() {
     echo ""
     sudo ./Maintance_Scripts/setupDB.sh
     sudo apt-get install -y iputils-ping
+    sudo apt install python3
+    sudo apt install python3-pip
 }
 
 read -p "Do you want to update apt and pip? (Recommended) (Y/N): " python_choice
