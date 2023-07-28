@@ -4,7 +4,6 @@ set_permissions() {
     echo ""
     echo "Making files executeable"
     echo ""
-    #cd ~/GNGC-CYBER-RANGE
     chmod +x setup.sh
     chmod +x start.sh
     chmod +x stop.sh
