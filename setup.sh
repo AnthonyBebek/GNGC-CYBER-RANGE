@@ -60,7 +60,6 @@ install_other_dependencies() {
     sudo apt install python3-pip
     sudo apt install mariadb-server
     echo ""
-    sudo mysql_secure_installation
 }
 
 read -p "Do you want to install other dependencies? (Y/N): " other_choice

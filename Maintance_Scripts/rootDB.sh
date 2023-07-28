@@ -1,6 +1,8 @@
 #!/bin/bash
 
 sudo apt update
+echo ""
+echo "Installing ....."
 sudo apt install -y mariadb-server
 sudo service mysql start
 
