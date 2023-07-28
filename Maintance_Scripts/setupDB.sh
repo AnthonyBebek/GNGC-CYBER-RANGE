@@ -10,17 +10,9 @@ set_root_password() {
     echo "Setting root password"
 
     sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'GNGC-PASS';"
-    sudo mysql_secure_installation <<EOF
-Y
-GNGC-PASS
-GNGC-PASS
-Y
-Y
-Y
-Y
-EOF
-    echo "MariaDB secure installation completed."
-    }
+    sudo mysql -e "FLUSH PRIVILEGES;"
+    echo "Root password set successfully."
+}
 
 set_root_password
 echo ""
@@ -42,4 +34,5 @@ create_or_update_user() {
     echo ""
     echo "New account has been created or updated!"
 }
+
 create_or_update_user
