@@ -13,6 +13,7 @@ class Users(Base):
     __tablename__ = "Users"
     userId = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     userName = Column(String(80), nullable=False)
+    studentId = Column(Integer, nullable=False)
     userPass = Column(String(80), nullable=False)
     userMail  = Column(String(80), nullable=False)
 
@@ -27,3 +28,5 @@ class Users(Base):
 
     def is_active(self):
         return str(self.userId)
+
+Base.metadata.create_all(engine)
