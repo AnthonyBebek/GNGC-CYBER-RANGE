@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Install MariaDB server
-#sudo apt update
+sudo apt update
 sudo apt install -y mariadb-server
+sudo service mysql start
 
 # Set the root password for MariaDB
 sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'GNGC-PASS';"

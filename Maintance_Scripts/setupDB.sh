@@ -1,6 +1,5 @@
 #!/bin/bash
-sudo service mysql stop
-sudo service mysql start
+set_root_password
 echo ""
 
 set_root_password() {
@@ -23,6 +22,4 @@ create_or_update_user() {
     echo ""
     echo "New account has been created or updated!"
 }
-
-set_root_password
 create_or_update_user
