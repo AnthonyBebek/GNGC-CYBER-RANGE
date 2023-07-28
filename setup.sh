@@ -46,6 +46,7 @@ install_python_dependencies() {
     pip3 install time
     pip3 install threading
     pip3 install mysqlclient
+    pip3 install pymysql
     pip3 cache purge
 }
 

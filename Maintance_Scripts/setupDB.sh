@@ -15,27 +15,12 @@ set_root_password() {
 
 }
 
-set_root_password
-echo ""
-<<com
-create_or_update_user() {
-    local current_user="systems"
-    #$(whoami)
-    local new_password="pass"
-
-    echo "Creating new user: $current_user"
-    echo "New password: $new_password"
-
-    mysql --user=root --password=GNGC-PASS --socket=/var/run/mysqld/mysqld.sock -e "
-        CREATE OR REPLACE USER '$current_user'@'localhost' IDENTIFIED BY '$new_password';
-        GRANT ALL PRIVILEGES ON *.* TO '$current_user'@'localhost';
-        FLUSH PRIVILEGES;
-    "
-
+setup_default_db(){
+    mysql -e "CREATE DATABASE IF NOT EXISTS gngcmain;" -u root -p"GNGC-PASS" 2>/dev/null
     echo ""
-    echo "New account has been created or updated!"
+    echo "Created default user database"
 }
 
-create_or_update_user
-
-com
+set_root_password
+setup_default_db
+echo ""
