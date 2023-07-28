@@ -16,7 +16,7 @@ set_root_password() {
 
 set_root_password
 echo ""
-
+<<com
 create_or_update_user() {
     local current_user="systems"
     #$(whoami)
@@ -36,3 +36,5 @@ create_or_update_user() {
 }
 
 create_or_update_user
+
+com
