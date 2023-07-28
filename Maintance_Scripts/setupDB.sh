@@ -8,9 +8,11 @@ set_root_password() {
     sudo service mysql start
     echo ""
     echo "Setting root password"
-    sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'GNGC-PASS';"
-    sudo mysql -e "FLUSH PRIVILEGES;"
+    echo ""
+    sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'GNGC-PASS';" 2>/dev/null
+    sudo mysql -e "FLUSH PRIVILEGES;" 2>/dev/null
     echo "Root password set successfully."
+
 }
 
 set_root_password
