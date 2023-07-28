@@ -60,6 +60,12 @@ install_other_dependencies() {
     sudo apt install python3-pip
 }
 
+read -p "Do you want to install other dependencies? (Y/N): " other_choice
+if [[ "$other_choice" =~ ^[Yy]$ ]]; then
+    install_other_dependencies
+    end_message
+fi
+
 read -p "Do you want to update apt and pip? (Recommended) (Y/N): " python_choice
 if [[ "$python_choice" =~ ^[Yy]$ ]]; then
     update_installers
@@ -68,12 +74,6 @@ fi
 read -p "Do you want to install Python dependencies? (Y/N): " python_choice
 if [[ "$python_choice" =~ ^[Yy]$ ]]; then
     install_python_dependencies
-    end_message
-fi
-
-read -p "Do you want to install other dependencies? (Y/N): " other_choice
-if [[ "$other_choice" =~ ^[Yy]$ ]]; then
-    install_other_dependencies
     end_message
 fi
 
