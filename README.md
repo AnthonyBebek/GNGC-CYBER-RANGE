@@ -23,6 +23,12 @@ To shutdown server
 #### The GNGC Cyber Range - Tasklist
 - [x] Github Repository Setup
 - [x] Github - VS Code Intergration Setup
+- [ ] Maintance Scripts
+    - [x] Create setup file
+    - [x] Create setupcheck file
+    - [x] Create startserver file
+    - [x] Create setupDB file
+    - [x] Create custom commands file
 - [ ] Full Network Connectivity
     - [ ] Basic Network structure designed
     - [ ] Switch / Router Setup

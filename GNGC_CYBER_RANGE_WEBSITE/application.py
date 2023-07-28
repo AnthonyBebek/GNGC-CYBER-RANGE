@@ -26,7 +26,9 @@ def utility_functions():
 
     return dict(mdebug=print_in_console)
 
-#Feel Free to completely rip out all this, I know this will work but you are the expert so do it your way
+#Feel Free to completely rip out all this, you are the expert so do it your way
+
+#Just please do it dude, i want to actually have an output on this boring server
 
 @app.route('/')
 @app.route('/index')
