@@ -4,8 +4,7 @@ sudo service mysql start
 echo ""
 
 set_root_password() {
-    mysqladmin -u root --password="GNGC-MYSQL" password "GNGC-MYSQL"
-    echo "Root password set successfully to 'GNGC-MYSQL'"
+    bash ./rootDB.sh
 }
 
 create_or_update_user() {

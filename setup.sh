@@ -48,9 +48,10 @@ install_python_dependencies() {
     pip3 cache purge
 }
 
+
 install_other_dependencies() {
     echo "Installing other dependencies..."
-    sudo apt-get install mariadb-server
+    #sudo apt install mariadb-server
     echo ""
     echo "Configuring databse default Users"
     echo ""
@@ -58,6 +59,9 @@ install_other_dependencies() {
     sudo apt-get install -y iputils-ping
     sudo apt install python3
     sudo apt install python3-pip
+    sudo apt install mariadb-server
+    echo ""
+    sudo mysql_secure_installation
 }
 
 read -p "Do you want to install other dependencies? (Y/N): " other_choice
