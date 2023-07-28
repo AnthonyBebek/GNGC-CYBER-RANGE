@@ -50,7 +50,7 @@ install_python_dependencies() {
 
 install_other_dependencies() {
     echo "Installing other dependencies..."
-    sudo apt-get install mysql-server
+    sudo apt-get install mariadb-server
     echo ""
     echo "Configuring databse default Users"
     echo ""
