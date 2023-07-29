@@ -5,6 +5,12 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from models import *
 from database import *
 
+'''
+I wrote a script that should save you a ton of time when creating the challenge pages for the site
+
+go into the GNGC_CYBER_RANGE_SCRIPTS folder and read the README.txt file
+'''
+
 app = Flask(__name__)
 ses = SessionLocal()
 

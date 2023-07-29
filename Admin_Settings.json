@@ -1,62 +1,167 @@
 {
-    "Challenges": {
-
-      "Command Line": {
-
-        "Challange 1": {
-          "Challange_name": "Basic Commands",
-          "IP": "192.168.30.1",
-          "Port": 3306
-        }
+  "Categories": {
+    "Basic Command Line": {
+      "Challenge 1": {
+        "Challenge_name": "How Helpful",
+        "Group": "Intro"
       },
-      "Web Challenges": {
-
-        "Challange 1": {
-          "Challange_name": "Web Basics",
-          "IP": "192.168.30.2",
-          "Port": 8080
-        }
+      "Challenge 2": {
+        "Challenge_name": "I Promise",
+        "Group": "Intro"
       },
-      "OINST Challenges": {
-
-        "Challange 1": {
-          "Challange_name": "Operating Systems",
-          "IP": "192.168.30.3",
-          "Port": 5555
-        }
+      "Challenge 3": {
+        "Challenge_name": "I Promise 2",
+        "Group": "Intro"
       },
-      "Networking Challenges": {
-
-        "Challange 1": {
-          "Challange_name": "Networking Concepts",
-          "IP": "192.168.30.4",
-          "Port": 12345
-        }
+      "Challenge 4": {
+        "Challenge_name": "List File",
+        "Group": "Looking Around"
       },
-      "Programming Challenges": {
-
-        "Challange 1": {
-          "Challange_name": "Python Basics",
-          "IP": "192.168.30.5",
-          "Port": 5000
-        }
+      "Challenge 5": {
+        "Challenge_name": "Hidden Files",
+        "Group": "Looking Around"
       },
-      "Digital Forensics Challenges": {
-
-        "Challange 1": {
-          "Challange_name": "Forensics Fundamentals",
-          "IP": "192.168.30.6",
-          "Port": 9999
-        }
+      "Challenge 6": {
+        "Challenge_name": "File Permissions",
+        "Group": "Looking Around"
       },
-      "Cryptography Challenges": {
-        
-        "Challange 1": {
-          "Challange_name": "Cryptography 101",
-          "IP": "192.168.30.7",
-          "Port": 7777
-        }
+      "Challenge 7": {
+        "Challenge_name": "Generic Travel",
+        "Group": "Moving Around"
+      },
+      "Challenge 8": {
+        "Challenge_name": "Absolute Directory",
+        "Group": "Moving Around"
+      },
+      "Challenge 9": {
+        "Challenge_name": "Homeward bound",
+        "Group": "Moving Around"
+      },
+      "Challenge 10": {
+        "Challenge_name": "Cat, More or less",
+        "Group": "Looking at files"
+      },
+      "Challenge 11": {
+        "Challenge_name": "Hex Appeal",
+        "Group": "Looking at files"
+      },
+      "Challenge 12": {
+        "Challenge_name": "String Theory",
+        "Group": "Looking at files"
+      },
+      "Challenge 13": {
+        "Challenge_name": "Unknown File",
+        "Group": "Looking at files"
+      },
+      "Challenge 14": {
+        "Challenge_name": "Matryoshka Doll",
+        "Group": "Archive Files"
+      },
+      "Challenge 15": {
+        "Challenge_name": "Fix Me",
+        "Group": "Challenges"
+      },
+      "Challenge 16": {
+        "Challenge_name": "Redirection",
+        "Group": "Challenges"
+      }
+    },
+    "Dynamic Web": {
+      "Challenge 1": {
+        "Challenge_name": "Simple Answer",
+        "Group": "Simple Web"
+      },
+      "Challenge 2": {
+        "Challenge_name": "Correct parameters",
+        "Group": "Simple Web"
+      },
+      "Challenge 3": {
+        "Challenge_name": "View Source",
+        "Group": "Simple Web"
+      },
+      "Challenge 4": {
+        "Challenge_name": "Alternate Options",
+        "Group": "Browser Tools"
+      },
+      "Challenge 5": {
+        "Challenge_name": "Hidden Fields",
+        "Group": "Browser Tools"
+      },
+      "Challenge 6": {
+        "Challenge_name": "Cookie Monster",
+        "Group": "Browser Tools"
+      },
+      "Challenge 7": {
+        "Challenge_name": "Call Mel",
+        "Group": "Off Script"
+      },
+      "Challenge 8": {
+        "Challenge_name": "Call Me 2",
+        "Group": "Off Script"
+      },
+      "Challenge 9": {
+        "Challenge_name": "Clever Cookie",
+        "Group": "Off Script"
+      },
+      "Challenge 10": {
+        "Challenge_name": "Diwhy challenge",
+        "Group": "Off Script"
+      },
+      "Challenge 11": {
+        "Challenge_name": "Basic Auth",
+        "Group": "Beyond Browsers"
+      },
+      "Challenge 12": {
+        "Challenge_name": "Accepting Victory",
+        "Group": "Beyond Browsers"
+      },
+      "Challenge 13": {
+        "Challenge_name": "Old Agent",
+        "Group": "Beyond Browsers"
+      },
+      "Challenge 14": {
+        "Challenge_name": "Old School",
+        "Group": "Beyond Browsers"
+      },
+      "Challenge 15": {
+        "Challenge_name": "IDK What my challenge name is (HELP!!!)",
+        "Group": "Beyond Beyond"
+      }
+    },
+    "OINST": {
+      "Challenge 1": {
+        "Challenge_name": "Operating Systems",
+        "IP": "192.168.30.3",
+        "Port": 5555
+      }
+    },
+    "Networking": {
+      "Challenge 1": {
+        "Challenge_name": "Networking Concepts",
+        "IP": "192.168.30.4",
+        "Port": 12345
+      }
+    },
+    "Programming Challenges": {
+      "Challenge 1": {
+        "Challenge_name": "Python Basics",
+        "IP": "192.168.30.5",
+        "Port": 5000
+      }
+    },
+    "Digital Forensics Challenges": {
+      "Challenge 1": {
+        "Challenge_name": "Forensics Fundamentals",
+        "IP": "192.168.30.6",
+        "Port": 9999
+      }
+    },
+    "Cryptography Challenges": {
+      "Challenge 1": {
+        "Challenge_name": "Cryptography 101",
+        "IP": "192.168.30.7",
+        "Port": 7777
       }
     }
   }
-  
+}
