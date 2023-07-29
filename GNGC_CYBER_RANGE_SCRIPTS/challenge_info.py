@@ -3,7 +3,7 @@ import json
 def get_challenge_settings(challenge_name):
     settings_file = "../Admin_Settings.json"
 
-    with open(settings_file, "r") as f:
+    with open(settings_file, "r", encoding="utf-8") as f:
         settings = json.load(f)
 
     challenges = settings.get("Categories")
@@ -11,7 +11,7 @@ def get_challenge_settings(challenge_name):
         print("Error: 'Categories' not found in the settings file.")
         return None
 
-    for category, challenge_list in challenges.items():
+    for challenge_list in challenges.items():
         for challenge in challenge_list.values():
             if challenge["Challenge_name"] == challenge_name:
                 return challenge
@@ -23,7 +23,7 @@ def get_challanges(Category):
     challenges_found = []
     settings_file = "../Admin_Settings.json"
 
-    with open(settings_file, "r") as f:
+    with open(settings_file, "r", encoding="utf-8") as f:
         settings = json.load(f)
 
     challenges = settings.get("Categories")
@@ -31,7 +31,7 @@ def get_challanges(Category):
         print("Error: 'Categories' not found in the settings file.")
         return None
 
-    for category, challenge_list in challenges.items():
+    for challenge_list in challenges.items():
         for challenge in challenge_list.values():
             challenge_name = challenge['Challenge_name']
             challenges_found.append(challenge_name)
