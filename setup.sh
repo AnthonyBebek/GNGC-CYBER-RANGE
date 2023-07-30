@@ -81,6 +81,8 @@ if [[ "$python_choice" =~ ^[Yy]$ ]]; then
     end_message
 fi
 
+cd ~/GNGC-CYBER-RANGE/
+
 set_permissions
 
 echo ""
