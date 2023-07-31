@@ -6,36 +6,37 @@ def get_challenge_settings(challenge_name):
     with open(settings_file, "r", encoding="utf-8") as f:
         settings = json.load(f)
 
-    challenges = settings.get("Categories")
-    if not challenges:
+    categories = settings.get("Categories")
+    if not categories:
         print("Error: 'Categories' not found in the settings file.")
         return None
 
-    for challenge_list in challenges.items():
-        for challenge in challenge_list.values():
-            if challenge["Challenge_name"] == challenge_name:
-                return challenge
+    for category, challenges in categories.items():
+        for challenge_data in challenges.values():
+            if challenge_data["Challenge_name"] == challenge_name:
+                return challenge_data
 
     print(f"Challenge '{challenge_name}' not found in the settings.")
     return None
 
-def get_challanges(Category):
+def get_challenges(Category):
     challenges_found = []
     settings_file = "../Admin_Settings.json"
 
     with open(settings_file, "r", encoding="utf-8") as f:
         settings = json.load(f)
 
-    challenges = settings.get("Categories")
-    if not challenges:
+    categories = settings.get("Categories")
+    if not categories:
         print("Error: 'Categories' not found in the settings file.")
         return None
 
-    for challenge_list in challenges.items():
-        for challenge in challenge_list.values():
-            challenge_name = challenge['Challenge_name']
-            challenges_found.append(challenge_name)
-        return challenges_found
+    for category, challenges in categories.items():
+        if category == Category:
+            for challenge_data in challenges.values():
+                challenge_name = challenge_data['Challenge_name']
+                challenges_found.append(challenge_name)
+            return challenges_found
 
     print(f"Category '{Category}' not found in the settings.")
     return None
