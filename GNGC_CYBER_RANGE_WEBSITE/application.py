@@ -1,6 +1,7 @@
 from flask import (Flask, render_template, request, url_for, redirect, session, flash)
 from flask_login import *
 from urllib.parse import urlparse, urljoin
+import re
 from werkzeug.security import generate_password_hash, check_password_hash
 from models import *
 from database import *
@@ -12,7 +13,10 @@ go into the GNGC_CYBER_RANGE_SCRIPTS folder and read the README.txt file
 '''
 
 app = Flask(__name__)
+
 ses = SessionLocal()
+login_manager = LoginManager()
+login_manager.init_app(app)
 
 @login_manager.user_loader
 def load_user(userid):
@@ -61,6 +65,32 @@ def login():
             
     return render_template('login.html')
 
+@app.route('/signup', methods = ['POST','GET'])
+def signup():
+    if request.method == 'POST':
+        studentId = request.form['studentId']
+        userMail = request.form['userMail']
+        userPass = request.form['userPass']
+        userConfPass = request.form['userConfPass']
+
+        if not studentId or not userPass or not userConfPass or not userMail:
+            flash('A field was not entered properly, Try Again')
+            return redirect(url_for('signup'))
+        else:
+            print('all fields sumbitted something')
+
+        regex = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
+        if (re.search(regex, userMail)):
+            print('Valid Email')
+        else:
+            print('Invalid Email')
+            flash('Email was invalid... Skill Issue')
+            return redirect(url_for('signup'))
+        if userPass != userConfPass:
+            flash('Passwords were not the same... Try again')
+            return redirect(url_for('signup'))
+        hasheduserPass = generate_password_hash(userPass, method='sha256')
+        print('password hashed')
 
 if __name__ == '__main__':
     app.run()

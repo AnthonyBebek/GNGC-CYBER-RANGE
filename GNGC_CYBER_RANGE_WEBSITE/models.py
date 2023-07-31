@@ -1,9 +1,6 @@
 from sqlalchemy import (String,
 Column,
-Integer,
-DateTime, 
-ForeignKey,
-UniqueConstraint 
+Integer
 )
 from sqlalchemy.ext.associationproxy import association_proxy
 from database import *
