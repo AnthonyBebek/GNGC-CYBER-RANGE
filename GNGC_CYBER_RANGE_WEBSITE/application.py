@@ -1,16 +1,10 @@
-from flask import (Flask, render_template, request, url_for, redirect, session, flash)
+from flask import (Flask, render_template, request, url_for, redirect, session, flash, abort)
 from flask_login import *
 from urllib.parse import urlparse, urljoin
 import re
 from werkzeug.security import generate_password_hash, check_password_hash
 from models import *
 from database import *
-
-'''
-I wrote a script that should save you a ton of time when creating the challenge pages for the site
-
-go into the GNGC_CYBER_RANGE_SCRIPTS folder and read the README.txt file
-'''
 
 app = Flask(__name__)
 
@@ -63,6 +57,14 @@ def login():
                 flash('Invalid Username or Password')
                 return redirect(url_for('login'))        
             
+            login_user(User)
+            next = request.args.get('next')
+            if not is_safe_url(next):
+                return abort(400)
+
+            session.permanent = True
+            session['User'] = User.userId
+            return redirect(next or url_for('dashboard'))
     return render_template('login.html')
 
 @app.route('/signup', methods = ['POST','GET'])
@@ -89,8 +91,18 @@ def signup():
         if userPass != userConfPass:
             flash('Passwords were not the same... Try again')
             return redirect(url_for('signup'))
-        hasheduserPass = generate_password_hash(userPass, method='sha256')
+        userPass = generate_password_hash(userPass, method='sha256')
         print('password hashed')
+        User = Users(studentId = studentId, userMail = userMail, userPass = userPass)
+        ses.add(User)
+        ses.commit()
+        print('user data added')
+
+        return redirect(url_for('login'))
+
+    return render_template('signup.html')
+
+
 
 if __name__ == '__main__':
     app.run()
