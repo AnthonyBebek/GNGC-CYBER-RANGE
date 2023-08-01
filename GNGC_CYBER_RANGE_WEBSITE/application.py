@@ -34,6 +34,7 @@ def index():
     if current_user.is_authenticated:
         return redirect('dashboard')
     return render_template('index.html')
+
 @app.route('/login', methods = ['POST','GET'])
 def login():
 
@@ -101,6 +102,15 @@ def signup():
         return redirect(url_for('login'))
 
     return render_template('signup.html')
+
+
+@app.route('/logout', methods = ('POST','GET'))
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
+
+
 
 
 
