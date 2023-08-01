@@ -1,6 +1,6 @@
 #!/bin/bash
 
-flask_app_dir="~/GNGC-CYBER-RANGE/GNGC_CYBER_RANGE_WEBSITE/"
+flask_app_dir="$HOME/GNGC-CYBER-RANGE/GNGC_CYBER_RANGE_WEBSITE/"
 domain_name="GNGC-CYBER-RANGE"
 apache_virtualhost_dir="/etc/apache2/sites-available/"
 
@@ -22,7 +22,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from application import app as application
 EOF
 
-mv ~/GNGC-CYBER-RANGE/Maintance_Scripts/application.wsgi "${flask_app_dir}"
+mv application.wsgi "${flask_app_dir}"
 
 cat <<EOF | sudo tee "${apache_virtualhost_dir}${domain_name}.conf"
 <VirtualHost *:80>
