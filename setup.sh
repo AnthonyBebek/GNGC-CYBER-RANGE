@@ -59,11 +59,11 @@ install_other_dependencies() {
     sudo apt install mariadb-server
     echo ""
     sudo ./Maintance_Scripts/setupDB.sh
-    sudo apt-get install apache2
     sudo apt-get install -y iputils-ping
     sudo apt install python3
     sudo apt install python3-pip
     echo ""
+    sudo ./Maintance_Scripts/setupWSGI.sh
 }
 
 read -p "Do you want to install other dependencies? (Y/N): " other_choice
