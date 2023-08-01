@@ -56,11 +56,13 @@ install_other_dependencies() {
     echo ""
     echo "Installing and configuing database"
     echo ""
+    sudo apt install mariadb-server
+    echo ""
     sudo ./Maintance_Scripts/setupDB.sh
+    sudo apt-get install apache2
     sudo apt-get install -y iputils-ping
     sudo apt install python3
     sudo apt install python3-pip
-    sudo apt install mariadb-server
     echo ""
 }
 
