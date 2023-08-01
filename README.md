@@ -32,13 +32,13 @@ To shutdown server
 - [ ] Full Network Connectivity
     - [ ] Basic Network structure designed
     - [ ] Switch / Router Setup
-    - [ ] Centos Server setup
+    - [x] Ubuntu Server setup
     - [ ] Basic Kali installation installed on all clients.
 - [ ] Basic Network Services
-    - [ ] DHCP pools setup / Configured
+    - [x] DHCP pools setup / Configured
     - [ ] DNS Setup / Configured
     - [ ] WSGI Server Setup / Configured
-    - [ ] SQL Server Setup / Configured.
+    - [x] SQL Server Setup / Configured.
 - [ ] Simple Challenges
     - [ ] Simple Command Line Challenges
 
