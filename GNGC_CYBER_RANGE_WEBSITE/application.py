@@ -71,12 +71,13 @@ def login():
 @app.route('/signup', methods = ['POST','GET'])
 def signup():
     if request.method == 'POST':
-        studentId = request.form['studentId']
+        userName = request.form['userName']
+        studentId = request.form['studentId'] 
         userMail = request.form['userMail']
         userPass = request.form['userPass']
         userConfPass = request.form['userConfPass']
 
-        if not studentId or not userPass or not userConfPass or not userMail:
+        if not userName or not studentId or not userPass or not userConfPass or not userMail:
             flash('A field was not entered properly, Try Again')
             return redirect(url_for('signup'))
         else:
@@ -94,7 +95,7 @@ def signup():
             return redirect(url_for('signup'))
         userPass = generate_password_hash(userPass, method='sha256')
         print('password hashed')
-        User = Users(studentId = studentId, userMail = userMail, userPass = userPass)
+        User = Users(userName = userName, studentId = studentId, userMail = userMail, userPass = userPass)
         ses.add(User)
         ses.commit()
         print('user data added')

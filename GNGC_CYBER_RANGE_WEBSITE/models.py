@@ -10,7 +10,7 @@ class Users(Base):
     userId = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     userName = Column(String(80), nullable=False)
     studentId = Column(Integer, nullable=False)
-    userPass = Column(String(80), nullable=False)
+    userPass = Column(String(999), nullable=False)
     userMail  = Column(String(80), nullable=False)
 
     def __repr__(self):

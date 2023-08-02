@@ -66,7 +66,7 @@ To shutdown server
     - [x] Creating MariaDB database
     - [ ] Creating database model in sqlalchemy
 - [ ] Implementing features 
-    - [ ] Login and signup 
+    - [X] Login and signup 
     - [ ] Basic home and dashboard page
 - [ ] Planning challenges
     - [ ] Basic web based challanges planned out
