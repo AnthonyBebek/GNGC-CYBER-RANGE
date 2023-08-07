@@ -13,7 +13,7 @@ class Users(Base):
     studentId = Column(Integer, nullable=False)
     userPass = Column(String(999), nullable=False)
     userMail  = Column(String(80), nullable=False)
-    userAdmin = Column(Boolean, default=False)
+    userAdmin = Column(Boolean, default=False, nullable = False)
 
     def __repr__(self):
         return f"User('{self.userName}')"
