@@ -1,5 +1,6 @@
 from sqlalchemy import (String,
 Column,
+Boolean,
 Integer)
 from sqlalchemy.ext.associationproxy import association_proxy
 from database import *
@@ -12,6 +13,7 @@ class Users(Base):
     studentId = Column(Integer, nullable=False)
     userPass = Column(String(999), nullable=False)
     userMail  = Column(String(80), nullable=False)
+    userAdmin = Column(Boolean, default=False)
 
     def __repr__(self):
         return f"User('{self.userName}')"
@@ -24,5 +26,11 @@ class Users(Base):
 
     def is_active(self):
         return str(self.userId)
+
+class Challenge(Base):
+    __tablename__ = "Challenge"
+    challengeId = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
+    challengeName = Column(String(999), nullable=False)
+
 
 Base.metadata.create_all(engine)

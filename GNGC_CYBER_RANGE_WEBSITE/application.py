@@ -7,8 +7,8 @@ from models import *
 from database import *
 
 app = Flask(__name__)
-
 ses = SessionLocal()
+app.secret_key = 'feiwfeqfalf'
 login_manager = LoginManager()
 login_manager.init_app(app)
 
@@ -31,8 +31,10 @@ def utility_functions():
 
 @app.route('/')
 def index():
+    #If the user didn'
     if current_user.is_authenticated:
-        return redirect('dashboard')
+        logout_user()
+
     return render_template('index.html')
 
 @app.route('/login', methods = ['POST','GET'])
@@ -49,7 +51,7 @@ def login():
             print('Both Fields were submitted')
             User = ses.query(Users).filter_by(studentId = studentId).first()
 
-            if not User: 
+            if not User:
                 flash('Invalid Student ID or Password')
                 return redirect(url_for('login'))
             if not userPass:
