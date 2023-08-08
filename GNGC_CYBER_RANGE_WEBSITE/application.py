@@ -122,5 +122,14 @@ def logout():
     logout_user()
     return redirect(url_for('index'))
 
+@app.route('/dashboard', methods = ('POST','GET'))
+@login_required
+def dashboard():
+    user = current_user.userId
+    userName = current_user.userName
+
+    return render_template('dashboard.html')
+
+
 if __name__ == '__main__':
     app.run()
