@@ -82,27 +82,37 @@ def signup():
         if not userName or not studentId or not userPass or not userConfPass or not userMail:
             flash('A field was not entered properly, Try Again')
             return redirect(url_for('signup'))
+        
         else:
             print('all fields sumbitted something')
 
         regex = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
         if (re.search(regex, userMail)):
             print('Valid Email')
+        
         else:
             print('Invalid Email')
             flash('Email was invalid... Skill Issue')
             return redirect(url_for('signup'))
+        
         if userPass != userConfPass:
             flash('Passwords were not the same... Try again')
             return redirect(url_for('signup'))
-        userPass = generate_password_hash(userPass, method='sha256')
+        
+        hasheduserPass = generate_password_hash(userPass, method='md5')
         print('password hashed')
-        User = Users(userName = userName, studentId = studentId, userMail = userMail, userPass = userPass)
-        ses.add(User)
-        ses.commit()
-        print('user data added')
-
-        return redirect(url_for('login'))
+        
+        try:
+            User = Users(userName = userName, studentId = studentId, userMail = userMail, userPass = hasheduserPass)
+            ses.add(User)
+            ses.commit()
+            print('user data added')
+            return redirect(url_for('login'))
+        
+        except Exception as e:
+            print(e)
+            flash('Somemthing went wrong when inputting you information')
+            ses.rollback()
 
     return render_template('signup.html')
 
