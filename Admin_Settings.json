@@ -7,39 +7,66 @@
       },
       "Challenge 2": {
         "Challenge_name": "I Promise",
-        "Group": "Intro"
+        "Group": "Intro",
+        "Description": "Do you promise that you will only use this infomation for good, and only use it in areas where it's permitted?",
+        "Note": "This isn't a joke, take this seriously",
+        "Answer": "Yes"
       },
       "Challenge 3": {
         "Challenge_name": "I Promise 2",
-        "Group": "Intro"
+        "Group": "Intro",
+        "Description": "I forgot what this challange does",
+        "Note": "I forgot what this challange does",
+        "Answer": "Yes"
       },
       "Challenge 4": {
         "Challenge_name": "List File",
-        "Group": "Looking Around"
+        "Group": "Looking Around",
+        "Description": "There are some files in your home directory, what's the command to see them?",
+        "Note": "Google is your friend",
+        "Answer": "ls"
       },
       "Challenge 5": {
         "Challenge_name": "Hidden Files",
-        "Group": "Looking Around"
+        "Group": "Looking Around",
+        "Description": "There are some hidden files in this directory, what's the name of the hidden file?",
+        "Note": "Commands have multiple arguments",
+        "Answer": "hello.txt"
       },
       "Challenge 6": {
         "Challenge_name": "File Permissions",
-        "Group": "Looking Around"
+        "Group": "Looking Around",
+        "Description": "Some files have different permissions, what are the permissions for the hello.txt file?",
+        "Note": "The ls command may guide you",
+        "Answer": "rwxrwx---"
       },
       "Challenge 7": {
         "Challenge_name": "Generic Travel",
-        "Group": "Moving Around"
+        "Group": "Moving Around",
+        "Description": "There is a folder in your home direcotry, open it. Whats the name of the file in there?",
+        "Note": "Google is your friend",
+        "Answer": "CTF{001}.txt"
       },
       "Challenge 8": {
         "Challenge_name": "Absolute Directory",
-        "Group": "Moving Around"
+        "Group": "Moving Around",
+        "Description": "What's the command to get into your root direcotry?",
+        "Note": "Google is your friend",
+        "Answer": "cd /"
       },
       "Challenge 9": {
         "Challenge_name": "Homeward bound",
-        "Group": "Moving Around"
+        "Group": "Moving Around",
+        "Description": "What's the command to get back into your home directory?",
+        "Note": "Just google it",
+        "Answer": "CD ~"
       },
       "Challenge 10": {
         "Challenge_name": "Cat, More or less",
-        "Group": "Looking at files"
+        "Group": "Looking at files",
+        "Description": "There is some hidden text in this image, what is it?",
+        "Note": "The name of this challange may be important",
+        "Answer": "CTF{CATZ-AR3-C00L}"
       },
       "Challenge 11": {
         "Challenge_name": "Hex Appeal",
@@ -162,6 +189,11 @@
         "IP": "192.168.30.7",
         "Port": 7777
       }
+    }
+  },
+  "login details": {
+    "Support Email": {
+      
     }
   }
 }
