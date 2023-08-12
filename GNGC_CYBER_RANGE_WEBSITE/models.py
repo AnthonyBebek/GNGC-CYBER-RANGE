@@ -29,7 +29,8 @@ class Users(Base):
 class Challenge(Base):
     __tablename__ = "Challenge"
     challengeId = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
-    challengeName = Column(String(999), nullable=False)
+    challengeName = Column(String(250), nullable=False)
+    challengeStatus = Column(Boolean, nullable = False, default = True)
 
 
 Base.metadata.create_all(engine)
