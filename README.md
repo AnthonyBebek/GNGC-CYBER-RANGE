@@ -59,15 +59,15 @@ To shutdown server
 - [x] Github - VS Code Intergration Setup
 - [ ] Finished tasklist on Readme file
 - [x] Basic Frontned
-    - [ ] Website Design
+    - [X] Website Design
     - [x] Basic HTML and CSS
-    - [ ] The structure of home page
-- [ ] Database
+    - [X] The structure of home page
+- [X] Database
     - [x] Creating MariaDB database
     - [x] Creating database model in sqlalchemy
-- [ ] Implementing features 
+- [X] Implementing features 
     - [X] Login and signup 
-    - [ ] Basic home and dashboard page
+    - [X] Basic home and dashboard page
 - [ ] Planning challenges
     - [ ] Basic web based challanges planned out
 - [ ] Implementing challenges 
