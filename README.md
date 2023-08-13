@@ -68,6 +68,7 @@ To shutdown server
 - [X] Implementing features 
     - [X] Login and signup 
     - [X] Basic home and dashboard page
+    - [ ] All Routes planned and done
 - [ ] Planning challenges
     - [ ] Basic web based challanges planned out
 - [ ] Implementing challenges 
