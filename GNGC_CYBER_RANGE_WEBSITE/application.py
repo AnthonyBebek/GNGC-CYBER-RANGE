@@ -109,8 +109,8 @@ def signup():
             print('user data added')
             return redirect(url_for('login'))
         
-        except Exception as e:
-            print(e)
+        except Exception as problem:
+            print(problem)
             flash('Somemthing went wrong when inputting you information')
             ses.rollback()
 
