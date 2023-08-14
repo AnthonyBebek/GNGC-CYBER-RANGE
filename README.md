@@ -30,13 +30,13 @@ To shutdown server
     - [x] Create setupDB file
     - [x] Create custom commands file
 - [ ] Full Network Connectivity
-    - [ ] Basic Network structure designed
-    - [ ] Switch / Router Setup
+    - [x] Basic Network structure designed
+    - [x] Switch / Router Setup
     - [x] Ubuntu Server setup
     - [ ] Basic Kali installation installed on all clients.
 - [ ] Basic Network Services
     - [x] DHCP pools setup / Configured
-    - [ ] DNS Setup / Configured
+    - [x] DNS Setup / Configured
     - [ ] WSGI Server Setup / Configured
     - [x] SQL Server Setup / Configured.
 - [ ] Simple Challenges
@@ -58,16 +58,17 @@ To shutdown server
 - [x] Github Repository Setup
 - [x] Github - VS Code Intergration Setup
 - [ ] Finished tasklist on Readme file
-- [ ] Basic Frontned
-    - [ ] Website Design
-    - [ ] Basic HTML and CSS
-    - [ ] The structure of home page
-- [ ] Database
+- [x] Basic Frontned
+    - [X] Website Design
+    - [x] Basic HTML and CSS
+    - [X] The structure of home page
+- [X] Database
     - [x] Creating MariaDB database
-    - [ ] Creating database model in sqlalchemy
-- [ ] Implementing features 
+    - [x] Creating database model in sqlalchemy
+- [X] Implementing features 
     - [X] Login and signup 
-    - [ ] Basic home and dashboard page
+    - [X] Basic home and dashboard page
+    - [ ] All Routes planned and done
 - [ ] Planning challenges
     - [ ] Basic web based challanges planned out
 - [ ] Implementing challenges 

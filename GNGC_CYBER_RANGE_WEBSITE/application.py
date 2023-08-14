@@ -7,8 +7,8 @@ from models import *
 from database import *
 
 app = Flask(__name__)
-
 ses = SessionLocal()
+app.secret_key = 'feiwfeqfalf'
 login_manager = LoginManager()
 login_manager.init_app(app)
 
@@ -31,8 +31,10 @@ def utility_functions():
 
 @app.route('/')
 def index():
+    #If the user didn'
     if current_user.is_authenticated:
-        return redirect('dashboard')
+        logout_user()
+
     return render_template('index.html')
 
 @app.route('/login', methods = ['POST','GET'])
@@ -49,7 +51,7 @@ def login():
             print('Both Fields were submitted')
             User = ses.query(Users).filter_by(studentId = studentId).first()
 
-            if not User: 
+            if not User:
                 flash('Invalid Student ID or Password')
                 return redirect(url_for('login'))
             if not userPass:
@@ -80,30 +82,39 @@ def signup():
         if not userName or not studentId or not userPass or not userConfPass or not userMail:
             flash('A field was not entered properly, Try Again')
             return redirect(url_for('signup'))
+        
         else:
             print('all fields sumbitted something')
 
         regex = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
         if (re.search(regex, userMail)):
             print('Valid Email')
+        
         else:
             print('Invalid Email')
             flash('Email was invalid... Skill Issue')
             return redirect(url_for('signup'))
+        
         if userPass != userConfPass:
             flash('Passwords were not the same... Try again')
             return redirect(url_for('signup'))
-        userPass = generate_password_hash(userPass, method='sha256')
+        
+        hasheduserPass = generate_password_hash(userPass, method='md5')
         print('password hashed')
-        User = Users(userName = userName, studentId = studentId, userMail = userMail, userPass = userPass)
-        ses.add(User)
-        ses.commit()
-        print('user data added')
-
-        return redirect(url_for('login'))
+        
+        try:
+            User = Users(userName = userName, studentId = studentId, userMail = userMail, userPass = hasheduserPass)
+            ses.add(User)
+            ses.commit()
+            print('user data added')
+            return redirect(url_for('login'))
+        
+        except Exception as problem:
+            print(problem)
+            flash('Somemthing went wrong when inputting you information')
+            ses.rollback()
 
     return render_template('signup.html')
-
 
 @app.route('/logout', methods = ('POST','GET'))
 @login_required
@@ -111,8 +122,13 @@ def logout():
     logout_user()
     return redirect(url_for('index'))
 
+@app.route('/dashboard', methods = ('POST','GET'))
+@login_required
+def dashboard():
+    user = current_user.userId
+    userName = current_user.userName
 
-
+    return render_template('dashboard.html')
 
 
 if __name__ == '__main__':
