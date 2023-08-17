@@ -2,6 +2,7 @@ from flask import (Flask, render_template, request, url_for, redirect, session, 
 from flask_login import *
 from urllib.parse import urlparse, urljoin
 import re
+import json
 from werkzeug.security import generate_password_hash, check_password_hash
 from models import *
 from database import *
