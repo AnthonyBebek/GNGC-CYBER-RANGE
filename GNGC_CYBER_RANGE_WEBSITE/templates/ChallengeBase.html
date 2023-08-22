@@ -17,27 +17,24 @@
               <a href="/home">GNGCyber</a>
             </div>
             <ul>
-              <li><a href="/login">Login</a></li>
-              <li><a href="/signup">Sign-up</a></li>
+                <ul>
+                    <li>
+                      <a href="/logout">Logout</a>
+                    </li>
+                </ul>
           </ul>
         </div>
     </nav>
     <div class="img">
-      <div class="center">
-        <div class="title"></div>
-          <div class="sub_title">Learn Cyber Security in a safe space</div>
-            <div class="btn">
-              <a href="/login">
-                  <button>Log-in</button>
-              </a>
-              <a href="/signup">
-                  <button>Sign-up</button>
-              </a>
-            </div>
-      </div>
+      {% block content %}
+
+
+
+    {% endblock %}
     </div>
     <footer class="footer">
-      <h3 style="color: #fff">This website is owned and operated by Gungahlin College</h3>
-    </footer>
-  </body>
-</html>
+        <h3>This website is owned and operated by Gungahlin College</h3>
+      </footer>
+    </body>
+
+    </html>
