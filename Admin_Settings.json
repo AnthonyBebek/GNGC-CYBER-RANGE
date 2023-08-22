@@ -15,7 +15,7 @@
       "Challenge 3": {
         "Challenge_name": "I Promise 2",
         "Group": "Intro",
-        "Description": "I forgot what this challange does",
+        "Description": "Do you swear to help your fellow Cyber Security Stuudents? Meaning you'll help them learn, not just give them the answer.",
         "Note": "I forgot what this challange does",
         "Answer": "Yes"
       },
@@ -71,6 +71,7 @@
       "Challenge 11": {
         "Challenge_name": "Hex Appeal",
         "Group": "Looking at files"
+        
       },
       "Challenge 12": {
         "Challenge_name": "String Theory",
