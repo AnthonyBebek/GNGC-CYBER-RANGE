@@ -34,10 +34,10 @@ To shutdown server
     - [x] Switch / Router Setup
     - [x] Ubuntu Server setup
     - [ ] Basic Kali installation installed on all clients.
-- [ ] Basic Network Services
+- [x] Basic Network Services
     - [x] DHCP pools setup / Configured
     - [x] DNS Setup / Configured
-    - [ ] WSGI Server Setup / Configured
+    - [x] WSGI Server Setup / Configured
     - [x] SQL Server Setup / Configured.
 - [ ] Simple Challenges
     - [ ] Simple Command Line Challenges
