@@ -131,7 +131,12 @@ def dashboard():
 
     return render_template('dashboard.html')
 
+@app.route('/challengeDash', methods = ['POST','GET'])
+@login_required
+def challengeDash():
+    user = current_user
 
+    return render_template('challengeDash.html')
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0")
