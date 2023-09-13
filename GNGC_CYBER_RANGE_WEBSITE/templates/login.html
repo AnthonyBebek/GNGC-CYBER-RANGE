@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
-    <title>Digicollect - login</title>
+    <title>GNGCyber - Login</title>
 </head>
 <body>
     <div class="img">
@@ -14,7 +14,7 @@
             {% for message in get_flashed_messages() %}
             <p>{{ message }}</p>
             {% endfor %}
-            <label for="username">Username</label>
+            <label for="username">Student ID</label>
             <input type="text" placeholder="Student ID" name="studentId">
             <label for="Password">Password</label>
             <input type="password" placeholder="Password" name="userPass">

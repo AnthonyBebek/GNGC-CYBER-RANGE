@@ -32,11 +32,12 @@ def utility_functions():
 
 @app.route('/')
 def index():
+    pageName = 'Home'
     #If the user didn'
     if current_user.is_authenticated:
         logout_user()
 
-    return render_template('index.html')
+    return render_template('index.html', pageName = pageName)
 
 @app.route('/login', methods = ['POST','GET'])
 def login():
@@ -129,7 +130,7 @@ def dashboard():
     user = current_user.userId
     userName = current_user.userName
 
-    return render_template('dashboard.html')
+    return render_template('dashboard.html', userName = userName)
 
 @app.route('/challengeDash', methods = ['POST','GET'])
 @login_required
