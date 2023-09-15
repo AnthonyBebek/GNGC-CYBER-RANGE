@@ -1,5 +1,6 @@
 import json
 
+
 def get_challenge_settings(challenge_name):
     settings_file = "../Admin_Settings.json"
 

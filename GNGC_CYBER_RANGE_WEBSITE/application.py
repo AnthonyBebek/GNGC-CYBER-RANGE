@@ -30,6 +30,8 @@ def utility_functions():
     
     return dict(mdebug=print_in_console)
 
+
+
 @app.route('/')
 def index():
     pageName = 'Home'
@@ -136,6 +138,20 @@ def dashboard():
 @login_required
 def challengeDash():
     user = current_user
+
+    def get_categories(category_name):
+        challenges_found = []
+        settings_file = "../Admin_Settings.json"
+
+        with open(settings_file, "r", encoding="utf-8") as f:
+            settings = json.load(f)
+
+        categories = settings.get('Categories')
+
+        for category in categories:
+            print(category)
+        
+    
 
     return render_template('challengeDash.html')
 
