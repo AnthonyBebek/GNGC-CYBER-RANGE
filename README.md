@@ -29,18 +29,18 @@ To shutdown server
     - [x] Create startserver file
     - [x] Create setupDB file
     - [x] Create custom commands file
-- [ ] Full Network Connectivity
+- [x] Full Network Connectivity
     - [x] Basic Network structure designed
     - [x] Switch / Router Setup
     - [x] Ubuntu Server setup
-    - [ ] Basic Kali installation installed on all clients.
+    - [x] Basic Kali installation installed on all clients.
 - [x] Basic Network Services
     - [x] DHCP pools setup / Configured
     - [x] DNS Setup / Configured
     - [x] WSGI Server Setup / Configured
     - [x] SQL Server Setup / Configured.
-- [ ] Simple Challenges
-    - [ ] Simple Command Line Challenges
+- [x] Simple Challenges
+    - [x] Simple Command Line Challenges
 
 **-- Everything from this point on should be completed in Assignment 3 --**
 
@@ -57,7 +57,7 @@ To shutdown server
 #### GNGC Cyber Range Web Component - Tasklist
 - [x] Github Repository Setup
 - [x] Github - VS Code Intergration Setup
-- [ ] Finished tasklist on Readme file
+- [x] Finished tasklist on Readme file
 - [x] Basic Frontned
     - [X] Website Design
     - [x] Basic HTML and CSS
@@ -68,9 +68,9 @@ To shutdown server
 - [X] Implementing features 
     - [X] Login and signup 
     - [X] Basic home and dashboard page
-    - [ ] All Routes planned and done
-- [ ] Planning challenges
-    - [ ] Basic web based challanges planned out
+    - [x] All Routes planned and done
+- [x] Planning challenges
+    - [x] Basic web based challanges planned out
 - [ ] Implementing challenges 
     - [ ] HTML, CSS and JS challanges created and running
     - [ ] Python challanges created and running
