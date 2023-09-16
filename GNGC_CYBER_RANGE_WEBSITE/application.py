@@ -139,18 +139,16 @@ def dashboard():
 def challengeDash():
     user = current_user
 
-    def get_categories(category_name):
-        categories_list = []
-        settings_file = "../Admin_Settings.json"
+    categories_list = []
+    settings_file = "../Admin_Settings.json"
 
-        with open(settings_file, "r", encoding="utf-8") as f:
-            settings = json.load(f)
+    with open(settings_file, "r", encoding="utf-8") as f:
+        settings = json.load(f)
 
-        categories = settings.get('Categories')
+    categories = settings.get('Categories')
 
-        for category in categories:
-            categories_list.append(category)
-        
+    for category in categories:
+        categories_list.append(category)
     
 
     return render_template('challengeDash.html')
