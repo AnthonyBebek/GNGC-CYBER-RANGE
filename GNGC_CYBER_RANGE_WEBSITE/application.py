@@ -140,7 +140,7 @@ def challengeDash():
     user = current_user
 
     def get_categories(category_name):
-        challenges_found = []
+        categories_list = []
         settings_file = "../Admin_Settings.json"
 
         with open(settings_file, "r", encoding="utf-8") as f:
@@ -149,7 +149,7 @@ def challengeDash():
         categories = settings.get('Categories')
 
         for category in categories:
-            print(category)
+            categories_list.append(category)
         
     
 

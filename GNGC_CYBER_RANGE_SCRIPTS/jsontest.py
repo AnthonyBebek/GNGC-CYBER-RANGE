@@ -11,4 +11,6 @@ with open(settings_file, "r", encoding="utf-8") as f:
 
 
     for category in categories:
-        print(category)
+        challenges_found.append(category)
+    print(challenges_found)
+    
