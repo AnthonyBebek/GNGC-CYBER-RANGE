@@ -132,24 +132,25 @@ def dashboard():
     user = current_user.userId
     userName = current_user.userName
 
-    return render_template('dashboard.html', userName = userName)
+    categories_list = []
+    challengsfile = "./Admin_Settings.json"
+
+    with open(challengsfile, "r", encoding="utf-8") as file:
+        settings = json.load(file)
+
+    categories = settings.get('Categories')
+
+    for category in categories:
+        categories_list.append(category)
+    print(categories_list)
+
+    return render_template('dashboard.html', userName = userName, categories_list = categories_list)
 
 @app.route('/challengeDash', methods = ['POST','GET'])
 @login_required
 def challengeDash():
     user = current_user
 
-    categories_list = []
-    settings_file = "../Admin_Settings.json"
-
-    with open(settings_file, "r", encoding="utf-8") as f:
-        settings = json.load(f)
-
-    categories = settings.get('Categories')
-
-    for category in categories:
-        categories_list.append(category)
-    
 
     return render_template('challengeDash.html')
 
