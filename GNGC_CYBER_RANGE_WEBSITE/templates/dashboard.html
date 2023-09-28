@@ -1,7 +1,10 @@
 {% extends 'ChallengeBase.html' %}
 {% block content %}
-
-
-
-
+<div class="challenge-body">
+    {% if catagory %}
+    {% for category in categories_list %}
+        <p>{{catagory}}</p>
+    {% endfor %}
+    {% endif %}
+</div>
 {% endblock %}
