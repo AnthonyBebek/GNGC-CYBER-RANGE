@@ -120,13 +120,13 @@ def signup():
 
     return render_template('signup.html')
 
-@app.route('/logout', methods = ('POST','GET'))
+@app.route('/logout', methods = ['POST','GET'])
 @login_required
 def logout():
     logout_user()
     return redirect(url_for('index'))
 
-@app.route('/dashboard', methods = ('POST','GET'))
+@app.route('/dashboard', methods = ['POST','GET'])
 @login_required
 def dashboard():
     user = current_user.userId
