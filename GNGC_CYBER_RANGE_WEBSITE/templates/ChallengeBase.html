@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>GNGCyber - {{ pageName }}</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,9 +11,8 @@
             '<script src="Jquery.js">\x3C/script>'
         )
     </script>
-</head>
-
-<body>
+  </head>
+  <body>
     <nav>
         <div class="menu">
             <div class="logo">
@@ -28,16 +27,11 @@
           </ul>
         </div>
     </nav>
-    <div>
-      {% block content %}
-
-
+    {% block content %}
 
     {% endblock %}
-    </div>
     <footer class="footer" style="color: #fff;">
-        <h3>This website is owned and operated by Gungahlin College</h3>
-      </footer>
-    </body>
-
-    </html>
+      <h3>This website is owned and operated by Gungahlin College</h3>
+    </footer>
+  </body>
+</html>

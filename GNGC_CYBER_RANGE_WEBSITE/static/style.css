@@ -271,3 +271,8 @@ input{
     border-radius: 5px;
     cursor: pointer;
 }
+.challenge-body {
+  margin-top: 50%;
+  margin-left: 50%;
+  color: #000;
+}

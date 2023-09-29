@@ -1,10 +1,12 @@
 {% extends 'ChallengeBase.html' %}
 {% block content %}
-<div class="challenge-body">
-    {% if catagory %}
-    {% for category in categories_list %}
-        <p>{{catagory}}</p>
-    {% endfor %}
-    {% endif %}
+<p>This is were the categories_list is</p>
+<div class="img">
+    <table>
+        {% for category in categories_list %}
+            <a href="/challengeDash">{{category}}</a>
+            
+        {% endfor %}
+    </table>
 </div>
 {% endblock %}
