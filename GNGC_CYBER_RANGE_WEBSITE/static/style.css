@@ -123,7 +123,7 @@ color: black;
 }
 .footer {
   bottom: 0;
-  position: absolute;
+  position: fixed;
   width: 100%;
   background: #1c2e4a;
   min-height: 100px;
@@ -271,8 +271,10 @@ input{
     border-radius: 5px;
     cursor: pointer;
 }
-.challenge-body {
-  margin-top: 50%;
-  margin-left: 50%;
-  color: #000;
+.category-container {
+  margin: 3.5% auto;
+  background: white;
+  padding-right: 2%;
+  text-align: center;
+  width: 70%;
 }
