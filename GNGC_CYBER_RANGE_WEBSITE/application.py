@@ -132,7 +132,7 @@ def dashboard():
     user = current_user.userId
     userName = current_user.userName
 
-    categories_list = []
+    categoryList = []
     challengsfile = "./Admin_Settings.json"
 
     with open(challengsfile, "r", encoding="utf-8") as file:
@@ -141,10 +141,10 @@ def dashboard():
     categories = settings.get('Categories')
 
     for category in categories:
-        categories_list.append(category)
-    print(categories_list)
+        categoryList.append(category)
+    print(categoryList)
 
-    return render_template('dashboard.html', userName = userName, categories_list = categories_list)
+    return render_template('dashboard.html', userName = userName, categoryList = categoryList)
 
 @app.route('/challengeDash', methods = ['POST','GET'])
 @login_required

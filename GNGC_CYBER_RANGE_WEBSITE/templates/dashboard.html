@@ -1,4 +1,10 @@
 {% extends 'ChallengeBase.html' %}
 {% block content %}
-<div class="category-container"></div>
+<div class="category-container">
+    <div class="categories">
+        {% for category in categoryList %}
+            <p>{{category}}</p>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
