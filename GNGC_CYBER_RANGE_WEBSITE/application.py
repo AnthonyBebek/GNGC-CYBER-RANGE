@@ -1,11 +1,11 @@
 from flask import (Flask, render_template, request, url_for, redirect, session, flash, abort)
 from flask_login import *
 from urllib.parse import urlparse, urljoin
-import re
+from validate_email import validate_email
 import json
 from werkzeug.security import generate_password_hash, check_password_hash
 from models import *
-from database import *
+
 
 app = Flask(__name__)
 ses = SessionLocal()
@@ -90,13 +90,12 @@ def signup():
         else:
             print('all fields sumbitted something')
 
-        regex = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
-        if (re.search(regex, userMail)):
+        is_valid = validate_email(userMail)  
+        if is_valid:
             print('Valid Email')
-        
         else:
             print('Invalid Email')
-            flash('Email was invalid... Skill Issue')
+            flash('Email was invalid')
             return redirect(url_for('signup'))
         
         if userPass != userConfPass:

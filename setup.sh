@@ -40,6 +40,7 @@ install_python_dependencies() {
     pip3 install werkzeug
     pip3 install sqlalchemy
     pip3 install re
+    pip3 install validate_email
     pip3 install socket
     pip3 install sys
     pip3 install os
