@@ -43,6 +43,7 @@ install_python_dependencies() {
     pip3 install validate_email
     pip3 install mysqlclient
     pip3 install pymysql
+    pip3 install validate_email
     pip3 cache purge
 }
 
