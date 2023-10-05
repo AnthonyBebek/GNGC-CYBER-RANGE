@@ -41,11 +41,6 @@ install_python_dependencies() {
     pip3 install sqlalchemy
     pip3 install re
     pip3 install validate_email
-    pip3 install socket
-    pip3 install sys
-    pip3 install os
-    pip3 install time
-    pip3 install threading
     pip3 install mysqlclient
     pip3 install pymysql
     pip3 cache purge

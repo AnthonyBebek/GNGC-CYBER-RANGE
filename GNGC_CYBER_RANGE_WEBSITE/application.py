@@ -3,6 +3,8 @@ from flask_login import *
 from urllib.parse import urlparse, urljoin
 from validate_email import validate_email
 import json
+import os
+import sys
 from werkzeug.security import generate_password_hash, check_password_hash
 from models import *
 
@@ -12,6 +14,10 @@ ses = SessionLocal()
 app.secret_key = 'feiwfeqfalf'
 login_manager = LoginManager()
 login_manager.init_app(app)
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+sys.path.append(PROJECT_ROOT)
+
+from GNGC_CYBER_RANGE_SCRIPTS import *
 
 @login_manager.user_loader
 def load_user(userid):
@@ -145,13 +151,12 @@ def dashboard():
 
     return render_template('dashboard.html', userName = userName, categoryList = categoryList)
 
-@app.route('/challengeDash', methods = ['POST','GET'])
+@app.route('/challengeDash/<category>', methods = ['POST','GET'])
 @login_required
-def challengeDash():
-    user = current_user
+def challengeDash(category):
 
 
     return render_template('challengeDash.html')
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0", debug=True)
