@@ -19,6 +19,9 @@ sys.path.append(PROJECT_ROOT)
 
 from GNGC_CYBER_RANGE_SCRIPTS import *
 
+
+
+
 @login_manager.user_loader
 def load_user(userid):
     return ses.query(Users).get(userid)
@@ -147,16 +150,16 @@ def dashboard():
 
     for category in categories:
         categoryList.append(category)
-    print(categoryList)
 
     return render_template('dashboard.html', userName = userName, categoryList = categoryList)
 
-@app.route('/challengeDash/<category>', methods = ['POST','GET'])
+@app.route('/challenge_Dashboard/<category>', methods = ['POST','GET'])
 @login_required
 def challengeDash(category):
+    challengeList = []
+    challengeList = (challenge_info.get_challenges(category))
 
-
-    return render_template('challengeDash.html')
+    return render_template('challengeDash.html', challengeList = challengeList)
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=True)
