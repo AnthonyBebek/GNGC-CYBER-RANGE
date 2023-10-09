@@ -1,6 +1,5 @@
 import json
 import challenge_info
-import time
 
 #Adds chanllange to json file
 def update_json(name):
@@ -29,6 +28,7 @@ def update_challanges():
         names = challenge_info.get_challenges(i)
         for x in names:
             update_json(x)
+    return True
 
 def update_data(challenge, key, Data):
     file_path = "../Admin_Config.json"
@@ -49,5 +49,21 @@ def update_data(challenge, key, Data):
         return "Error challenge not found!"
     return "True"
 
+
+def get_data(challenge):
+    file_path = "../Admin_Config.json"
+    try:
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+    except (json.JSONDecodeError, FileNotFoundError):
+                data = {}
+    if 'challenges' not in data:
+        return "File Empty!"
+    if challenge in data['challenges']:
+        return data['challenges'][challenge]
+
+
 update_challanges()
+print(get_data("How Helpful"))
 update_data("How Helpful", "Viewable", "False")
+print(get_data("How Helpful"))
