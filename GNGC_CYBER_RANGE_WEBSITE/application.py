@@ -61,7 +61,6 @@ def login():
             flash('You did not enter a Username or Password')
             return redirect(url_for('login'))
         else:
-            print('Both Fields were submitted')
             User = ses.query(Users).filter_by(studentId = studentId).first()
 
             if not User:
@@ -150,15 +149,16 @@ def dashboard():
 
     for category in categories:
         categoryList.append(category)
-
+    
     return render_template('dashboard.html', userName = userName, categoryList = categoryList)
 
 @app.route('/challenge_Dashboard/<category>', methods = ['POST','GET'])
 @login_required
 def challengeDash(category):
+    print(category)
     challengeList = []
     challengeList = (challenge_info.get_challenges(category))
-
+    print(challengeList)
     return render_template('challengeDash.html', challengeList = challengeList)
 
 if __name__ == '__main__':

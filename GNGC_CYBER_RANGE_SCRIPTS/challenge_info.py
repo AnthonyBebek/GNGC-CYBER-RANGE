@@ -2,7 +2,7 @@ import json
 
 
 def get_challenge_settings(challenge_name):
-    settings_file = "../Admin_Settings.json"
+    settings_file = "./Admin_Settings.json"
 
     with open(settings_file, "r", encoding="utf-8") as f:
         settings = json.load(f)
@@ -22,7 +22,7 @@ def get_challenge_settings(challenge_name):
 
 def get_challenges(Category):
     challenges_found = []
-    settings_file = "../Admin_Settings.json"
+    settings_file = "./Admin_Settings.json"
 
     with open(settings_file, "r", encoding="utf-8") as f:
         settings = json.load(f)
