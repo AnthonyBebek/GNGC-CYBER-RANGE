@@ -8,8 +8,8 @@ import sys
 from werkzeug.security import generate_password_hash, check_password_hash
 from models import *
 
-
 app = Flask(__name__)
+
 ses = SessionLocal()
 app.secret_key = 'feiwfeqfalf'
 login_manager = LoginManager()
@@ -18,9 +18,6 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir
 sys.path.append(PROJECT_ROOT)
 
 from GNGC_CYBER_RANGE_SCRIPTS import *
-
-
-
 
 @login_manager.user_loader
 def load_user(userid):
@@ -38,8 +35,6 @@ def utility_functions():
         print (str(message))
     
     return dict(mdebug=print_in_console)
-
-
 
 @app.route('/')
 def index():
