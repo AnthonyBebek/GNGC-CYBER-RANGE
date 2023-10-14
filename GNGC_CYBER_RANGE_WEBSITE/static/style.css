@@ -278,3 +278,16 @@ input{
   text-align: center;
   width: 70%;
 }
+
+/* Rectangle 2 */
+.content-rectangle {
+  box-sizing: border-box;
+  position: absolute;
+  width: 167px;
+  height: 56px;
+  background: #1F3442;
+  border-radius: 9px;
+}
+
+
+
