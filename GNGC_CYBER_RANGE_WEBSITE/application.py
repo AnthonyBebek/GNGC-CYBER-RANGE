@@ -150,17 +150,15 @@ def dashboard():
 @app.route('/challenge_Dashboard/<category>', methods = ['POST','GET'])
 @login_required
 def challengeDash(category):
-    print(category)
     challengeList = []
     challengeList = challenge_info.get_challenges(category)
-    print(challengeList)
     return render_template('challengeDash.html', challengeList = challengeList)
 
 @app.route('/challenge/<challenge>', methods = ['POST','GET'])
 def challenge(challenge):
-    print(challenge)
-
     challengeinf = challenge_info.get_challenge_settings(challenge)
+    print(challengeinf)
+    challengeinf = challengeinf.values()
     print(challengeinf)
     return render_template('challenge.html', challengeinf = challengeinf)
 
