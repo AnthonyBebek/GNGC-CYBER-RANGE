@@ -156,13 +156,13 @@ def challengeDash(category):
     print(challengeList)
     return render_template('challengeDash.html', challengeList = challengeList)
 
-@app.route('/challenge/<challenge>')
+@app.route('/challenge/<challenge>', methods = ['POST','GET'])
 def challenge(challenge):
     print(challenge)
 
     challengeinf = challenge_info.get_challenge_settings(challenge)
     print(challengeinf)
+    return render_template('challenge.html', challengeinf = challengeinf)
 
-    return render_template('challenge.html')
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=True)
