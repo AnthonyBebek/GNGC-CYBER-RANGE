@@ -10,7 +10,7 @@ def get_challenge_settings(challenge_name):
     categories = settings.get("Categories")
     if not categories:
         print("Error: 'Categories' not found in the settings file.")
-        return None
+        raise ValueError("Error: 'Categories' not found in the settings file.")
 
     for category, challenges in categories.items():
         for challenge_data in challenges.values():
@@ -30,7 +30,7 @@ def get_challenges(Category):
     categories = settings.get("Categories")
     if not categories:
         print("Error: 'Categories' not found in the settings file.")
-        return None
+        raise ValueError("Error: 'Categories' not found in the settings file.")
 
     for category, challenges in categories.items():
         if category == Category:

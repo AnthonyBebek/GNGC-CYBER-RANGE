@@ -155,12 +155,27 @@ def challengeDash(category):
     return render_template('challengeDash.html', challengeList = challengeList)
 
 @app.route('/challenge/<challenge>', methods = ['POST','GET'])
+@login_required
 def challenge(challenge):
+    
     challengeinf = challenge_info.get_challenge_settings(challenge)
-    print(challengeinf)
-    challengeinf = challengeinf.values()
-    print(challengeinf)
+    challengeinf = list(challengeinf.values())
+
+    if request.method == 'POST':
+        challengeAnswer = request.form['challengeAnswer']
+
+        if challengeAnswer == challengeinf[3]:
+            return redirect(url_for('correct'))
+        else:
+            flash(challengeinf[2])
+        
     return render_template('challenge.html', challengeinf = challengeinf)
+
+@app.route('/correct')
+@login_required
+def correct():
+
+    return render_template('correct.html')
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=True)
