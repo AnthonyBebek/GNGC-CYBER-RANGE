@@ -174,7 +174,6 @@ def challenge(challenge):
 @app.route('/correct')
 @login_required
 def correct():
-
     return render_template('correct.html')
 
 if __name__ == '__main__':
