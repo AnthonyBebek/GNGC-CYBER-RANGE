@@ -278,6 +278,10 @@ input{
   text-align: center;
   width: 70%;
 }
-
-
-
+.category-box {
+  width: 167px;
+  height: 56px;
+  border-radius: 9px;
+  border: 2px solid #152238;
+  background: #1F3442;
+}

@@ -46,6 +46,7 @@
       "Challenge 11": {
         "Challenge_name": "Dumping Hex"
         
+        
       },
       "Challenge 12": {
         "Challenge_name": "String Theory"
@@ -63,75 +64,6 @@
         "Challenge_name": "Redirection"
       }
     },
-    "Dynamic Web": {
-      "Challenge 1": {
-        "Challenge_name": "Simple Answer",
-        "Group": "Simple Web"
-      },
-      "Challenge 2": {
-        "Challenge_name": "Correct parameters",
-        "Group": "Simple Web"
-      },
-      "Challenge 3": {
-        "Challenge_name": "View Source",
-        "Group": "Simple Web"
-      },
-      "Challenge 4": {
-        "Challenge_name": "Alternate Options",
-        "Group": "Browser Tools"
-      },
-      "Challenge 5": {
-        "Challenge_name": "Hidden Fields",
-        "Group": "Browser Tools"
-      },
-      "Challenge 6": {
-        "Challenge_name": "Cookie Monster",
-        "Group": "Browser Tools"
-      },
-      "Challenge 7": {
-        "Challenge_name": "Call Mel",
-        "Group": "Off Script"
-      },
-      "Challenge 8": {
-        "Challenge_name": "Call Me 2",
-        "Group": "Off Script"
-      },
-      "Challenge 9": {
-        "Challenge_name": "Clever Cookie",
-        "Group": "Off Script"
-      },
-      "Challenge 10": {
-        "Challenge_name": "Diwhy challenge",
-        "Group": "Off Script"
-      },
-      "Challenge 11": {
-        "Challenge_name": "Basic Auth",
-        "Group": "Beyond Browsers"
-      },
-      "Challenge 12": {
-        "Challenge_name": "Accepting Victory",
-        "Group": "Beyond Browsers"
-      },
-      "Challenge 13": {
-        "Challenge_name": "Old Agent",
-        "Group": "Beyond Browsers"
-      },
-      "Challenge 14": {
-        "Challenge_name": "Old School",
-        "Group": "Beyond Browsers"
-      },
-      "Challenge 15": {
-        "Challenge_name": "IDK What my challenge name is (HELP!!!)",
-        "Group": "Beyond Beyond"
-      }
-    },
-    "OINST": {
-      "Challenge 1": {
-        "Challenge_name": "Operating Systems",
-        "IP": "192.168.30.3",
-        "Port": 5555
-      }
-    },
     "Networking": {
       "Challenge 1": {
         "Challenge_name": "Networking Concepts",
@@ -144,20 +76,6 @@
         "Challenge_name": "Python Basics",
         "IP": "192.168.30.5",
         "Port": 5000
-      }
-    },
-    "Digital Forensics Challenges": {
-      "Challenge 1": {
-        "Challenge_name": "Forensics Fundamentals",
-        "IP": "192.168.30.6",
-        "Port": 9999
-      }
-    },
-    "Cryptography Challenges": {
-      "Challenge 1": {
-        "Challenge_name": "Cryptography 101",
-        "IP": "192.168.30.7",
-        "Port": 7777
       }
     }
   },
