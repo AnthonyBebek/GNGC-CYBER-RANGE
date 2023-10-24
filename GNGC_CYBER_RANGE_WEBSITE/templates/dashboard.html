@@ -3,7 +3,12 @@
 <div class="category-container">
     <div class="categories">
         {% for category in categoryList %}
-        <a href="/challenge_Dashboard/{{category}}">{{category}}</a>
+        
+            <a href="/challenge_Dashboard/{{category}}">
+                <div class="category-box">
+                    <h2>{{category}}</h2>
+                </div>
+            </a>
         {% endfor %}
     </div>
 </div>
