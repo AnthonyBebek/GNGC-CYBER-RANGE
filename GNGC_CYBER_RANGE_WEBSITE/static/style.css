@@ -275,6 +275,8 @@ input{
   margin: 3.5% auto;
   background: white;
   padding-right: 2%;
+  top: 50%;
+  left: 50%;
   text-align: center;
   width: 70%;
 }

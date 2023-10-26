@@ -168,7 +168,7 @@ def challenge(challenge):
             return redirect(url_for('correct'))
         else:
             flash(challengeinf[2])
-        
+
     return render_template('challenge.html', challengeinf = challengeinf)
 
 @app.route('/correct')
