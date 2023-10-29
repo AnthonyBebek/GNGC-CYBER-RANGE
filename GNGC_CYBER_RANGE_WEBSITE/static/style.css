@@ -284,9 +284,14 @@ input{
   border-radius: 2%;
 }
 .category-box {
-  width: 167px;
-  height: 56px;
+  width: 25%;
+  height: 40%;
+  margin: auto;
   border-radius: 9px;
   border: 2px solid #152238;
   background: #1F3442;
+}
+.category-box h2 {
+  color: #fff;
+  text-decoration: none;
 }
