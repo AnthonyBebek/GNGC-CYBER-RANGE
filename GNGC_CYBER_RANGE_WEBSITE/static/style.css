@@ -272,8 +272,7 @@ input{
     cursor: pointer;
 }
 .category-container {
-  margin: 3.5% auto;
-  background: white;
+  background: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75));
   padding-right: 2%;
   top: 0%;
   left: 15%;
@@ -284,14 +283,15 @@ input{
   border-radius: 2%;
 }
 .category-box {
-  width: 25%;
-  height: 40%;
-  padding: 10px;
-  margin: auto;
+  width: 30%;
+  height: 10%;
+  padding: 20px;
+  margin: 30px;
+    margin-top: 30px;
   border-radius: 9px;
-  border: 2px solid #152238;
+  border: 2px solid #fff;
   background: #1F3442;
-
+  margin-top: 80px;
 }
 .category-box h2 {
   color: #fff;
