@@ -273,10 +273,10 @@ input{
 }
 .category-container {
   background: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75));
-  padding-right: 2%;
   top: 0%;
   left: 15%;
   bottom: 0%;
+  height: 200vh;
   text-align: center;
   width: 70%;
   position: absolute;
@@ -298,4 +298,17 @@ input{
 .category-box h2 {
   color: #fff;
   text-decoration: none;
+}
+.challenge-box {
+
+}
+.challenge-box text {
+  color: #fff;
+}
+.challenge-hint {
+  padding: 20px;
+  background-color: #1c2e4a;
+  border-radius: 2px;
+  border: 2px solid #fff;
+  color: white;
 }
