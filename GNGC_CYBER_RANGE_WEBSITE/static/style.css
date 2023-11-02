@@ -313,7 +313,7 @@ input{
   grid-template-columns: auto auto auto auto;
 }
 .challenge-box {
-  width: 250px;
+  width: 251px;
   height: 80px;
   padding: 20px;
   margin-left: 15%;
