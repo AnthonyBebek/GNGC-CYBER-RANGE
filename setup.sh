@@ -35,16 +35,16 @@ update_installers() {
 
 install_python_dependencies() {
     echo "Installing Python dependencies..."
-    python3 -m pip install flask
-    python3 -m pip install flask_login
-    python3 -m pip install werkzeug
-    python3 -m pip install sqlalchemy
-    python3 -m pip install re
-    python3 -m pip install validate_email
-    python3 -m pip install mysqlclient
-    python3 -m pip install pymysql
-    python3 -m pip install validate_email
-    python3 -m pip cache purge
+    python3 -m pip install flask --break-system-packages
+    python3 -m pip install flask_login --break-system-packages
+    python3 -m pip install werkzeug --break-system-packages
+    python3 -m pip install sqlalchemy --break-system-packages
+    python3 -m pip install re --break-system-packages
+    python3 -m pip install validate_email --break-system-packages
+    python3 -m pip install mysqlclient --break-system-packages
+    python3 -m pip install pymysql --break-system-packages
+    python3 -m pip install validate_email --break-system-packages
+    python3 -m pip cache purge --break-system-packages
 }
 
 
