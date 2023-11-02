@@ -305,15 +305,20 @@ input{
   left: 15%;
   bottom: 0%;
   height: 200vh;
-  text-align: center;
   width: 70%;
   position: absolute;
   border-radius: 2%;
   display: grid;
   grid-template-columns: auto auto auto auto;
 }
+.category-grid {
+  height: 100%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
 .challenge-box {
-  width: 251px;
+  width: 250px;
   height: 80px;
   padding: 20px;
   margin-left: 15%;
@@ -323,6 +328,13 @@ input{
   margin-top: 80px;
   text-align: center;
 }
+.link-box {
+  width: 250px;
+  height: 80px;
+}
+.challenge-box h2 {
+  color: #fff;
+} 
 .challenge-hint {
   padding: 20px;
   background-color: #1c2e4a;
