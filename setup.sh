@@ -35,16 +35,16 @@ update_installers() {
 
 install_python_dependencies() {
     echo "Installing Python dependencies..."
-    pip3 install flask
-    pip3 install flask_login
-    pip3 install werkzeug
-    pip3 install sqlalchemy
-    pip3 install re
-    pip3 install validate_email
-    pip3 install mysqlclient
-    pip3 install pymysql
-    pip3 install validate_email
-    pip3 cache purge
+    python3 -m pip3 install flask
+    python3 -m pip3 install flask_login
+    python3 -m pip3 install werkzeug
+    python3 -m pip3 install sqlalchemy
+    python3 -m pip3 install re
+    python3 -m pip3 install validate_email
+    python3 -m pip3 install mysqlclient
+    python3 -m pip3 install pymysql
+    python3 -m pip3 install validate_email
+    python3 -m pip3 cache purge
 }
 
 
