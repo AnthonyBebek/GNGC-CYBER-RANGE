@@ -310,13 +310,13 @@ input{
   top: 0%;
   left: 15%;
   bottom: 0%;
-  height: 200vh;
+  height: 100vh;
   width: 70%;
   position: absolute;
   border-radius: 2%;
 }
 .challenge-grid {
-  height: 100%;
+  height: 75%;
   text-align: center;
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -340,7 +340,10 @@ input{
 }
 .challenge-box h2 {
   color: #fff;
-} 
+}
+.challenge-crate {
+
+}
 .challenge-hint {
   padding: 20px;
   background-color: #1c2e4a;

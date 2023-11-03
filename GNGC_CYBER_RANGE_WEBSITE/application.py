@@ -7,11 +7,18 @@ import os
 import sys
 from werkzeug.security import generate_password_hash, check_password_hash
 from models import *
+import random
+import string
 
 app = Flask(__name__)
 
+def randomstring(length):
+    letters = string.ascii_lowercase
+    resultstr = ''.join(random.choice(letters) for i in range(length))
+    return resultstr
+
 ses = SessionLocal()
-app.secret_key = 'feiwfeqfalf'
+app.secret_key = randomstring(64)
 login_manager = LoginManager()
 login_manager.init_app(app)
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
