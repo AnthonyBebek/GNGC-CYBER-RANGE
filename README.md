@@ -42,18 +42,24 @@ To shutdown server
 - [x] Simple Challenges
     - [x] Simple Command Line Challenges
 
-**-- Everything from this point on should be completed in Assignment 3 --**
+**-- Everything from this point on has been completed in the implemtation phase of the project --**
 
-- [ ] Advanced Challenges
-    - [ ] Advanced Command Line Challenges
-    - [ ] Dynamic Web Challenges
-    - [ ] OINST Challenges
-    - [ ] Networking Challenges
-    - [ ] Programming Challenges
-    - [ ] Digital Forensics Challenges
-    - [ ] Cryptography Challenges
-
-[comment]: <> (Please work on this Om)
+- [x] Setting up the GNGC-Router
+    - [x] Creating New DHCP pools
+    - [x] Adding New Options to DHCP Server
+    - [x] Setting up Router Interfaces
+    - [x] Adding new DHCP Network
+- [x] Setting up the Clients
+    - [x] Chaing BIOS Settings to boot off NIC
+    - [x] Installing Kali linux on Client PC
+    - [x] Cloning Kali PC
+    - [x] Using UDP Multicast to push updates to other Clients
+- [x] Setting up the Server
+    - [x] Installing Debian based linux on server
+    - [x] Installing virtual box and dependacies on server
+    - [x] Installing Web Server scripts on Server
+    - [x] Running and backing up VM's on VBox
+    
 #### GNGC Cyber Range Web Component - Tasklist
 - [x] Github Repository Setup
 - [x] Github - VS Code Intergration Setup
@@ -72,11 +78,11 @@ To shutdown server
 - [x] Planning challenges
     - [x] Basic web based challanges planned out
 - [ ] Implementing challenges 
-    - [ ] HTML, CSS and JS challanges created and running
+    - [x] HTML, CSS and JS challanges created and running
     - [ ] Python challanges created and running
-- [ ] Cleaning and polishing
-    - [ ] Cleaning up code and making it more efficient
-    - [ ] Self testing to plug any leaks and protect from errors
+- [x] Cleaning and polishing
+    - [x] Cleaning up code and making it more efficient
+    - [x] Self testing to plug any leaks and protect from errors
 - [ ] User Testing
     - [ ] Have a group of users test program
     - [ ] From experienced cyber users to beginners
