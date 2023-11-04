@@ -7,20 +7,24 @@ import os
 import sys
 from werkzeug.security import generate_password_hash, check_password_hash
 from models import *
-
+import random
+import string
 
 app = Flask(__name__)
+
+def randomstring(length):
+    letters = string.ascii_lowercase
+    resultstr = ''.join(random.choice(letters) for i in range(length))
+    return resultstr
+
 ses = SessionLocal()
-app.secret_key = 'feiwfeqfalf'
+app.secret_key = randomstring(64)
 login_manager = LoginManager()
 login_manager.init_app(app)
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 sys.path.append(PROJECT_ROOT)
 
 from GNGC_CYBER_RANGE_SCRIPTS import *
-
-
-
 
 @login_manager.user_loader
 def load_user(userid):
@@ -38,8 +42,6 @@ def utility_functions():
         print (str(message))
     
     return dict(mdebug=print_in_console)
-
-
 
 @app.route('/')
 def index():
@@ -61,7 +63,6 @@ def login():
             flash('You did not enter a Username or Password')
             return redirect(url_for('login'))
         else:
-            print('Both Fields were submitted')
             User = ses.query(Users).filter_by(studentId = studentId).first()
 
             if not User:
@@ -150,16 +151,37 @@ def dashboard():
 
     for category in categories:
         categoryList.append(category)
-
+    
     return render_template('dashboard.html', userName = userName, categoryList = categoryList)
 
 @app.route('/challenge_Dashboard/<category>', methods = ['POST','GET'])
 @login_required
 def challengeDash(category):
     challengeList = []
-    challengeList = (challenge_info.get_challenges(category))
-
+    challengeList = challenge_info.get_challenges(category)
     return render_template('challengeDash.html', challengeList = challengeList)
+
+@app.route('/challenge/<challenge>', methods = ['POST','GET'])
+@login_required
+def challenge(challenge):
+    
+    challengeinf = challenge_info.get_challenge_settings(challenge)
+    challengeinf = list(challengeinf.values())
+
+    if request.method == 'POST':
+        challengeAnswer = request.form['challengeAnswer']
+
+        if challengeAnswer == challengeinf[3]:
+            return redirect(url_for('correct'))
+        else:
+            flash(challengeinf[2])
+
+    return render_template('challenge.html', challengeinf = challengeinf)
+
+@app.route('/correct')
+@login_required
+def correct():
+    return render_template('correct.html')
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=True)

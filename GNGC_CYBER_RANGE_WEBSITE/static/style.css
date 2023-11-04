@@ -61,14 +61,14 @@ margin-left: 0px;
   background: #fff;
   color:black;
 }
-.img{
+body {
   background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75)), url('/static/IMAGES USED/numbers.jpg');
-  background-repeat: repeat-y;
   width: 100%;
   height: 100vh;
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  position: relative;
+  position: relative; 
 }
 .center {
   position: absolute;
@@ -272,9 +272,82 @@ input{
     cursor: pointer;
 }
 .category-container {
-  margin: 3.5% auto;
-  background: white;
-  padding-right: 2%;
-  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75));
+  top: 0%;
+  left: 15%;
+  bottom: 0%;
+  height: 200vh;
   width: 70%;
+  text-align: center;
+  position: absolute;
+  border-radius: 2%;
+}
+.category-grid {
+  height: 50%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  justify-items: center;
+}
+.category-box {
+  width: 250px;
+  height: 80px;
+  padding: 20px;
+  margin: 25%;
+  border-radius: 9px;
+  border: 2px solid #fff;
+  background: #1F3442;
+  margin-top: 80px;
+  text-align: center;
+}
+.category-box h2 {
+  color: #fff;
+  text-decoration: none;
+}
+.challenge-container {
+  background: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75));
+  top: 0%;
+  left: 15%;
+  bottom: 0%;
+  height: 100vh;
+  width: 70%;
+  position: absolute;
+  border-radius: 2%;
+}
+.challenge-grid {
+  height: 75%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+  justify-items: center;
+}
+.challenge-box {
+  width: 250px;
+  height: 80px;
+  padding: 20px;
+  margin-left: 15%;
+  border-radius: 9px;
+  border: 2px solid #fff;
+  background: #1F3442;
+  margin-top: 80px;
+  text-align: center;
+}
+.link-box {
+  width: 250px;
+  height: 80px;
+}
+.challenge-box h2 {
+  color: #fff;
+}
+.challenge-crate {
+
+}
+.challenge-hint {
+  padding: 20px;
+  background-color: #1c2e4a;
+  border-radius: 2px;
+  border: 2px solid #fff;
+  color: white;
 }

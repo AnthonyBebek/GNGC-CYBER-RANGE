@@ -1,10 +1,14 @@
 {% extends 'ChallengeBase.html' %}
 {% block content %}
-<div class="category-container">
-    <div class="categories">
+<div class="challenge-container">
+    <div class="challenge-grid">
         {% for challenge in challengeList %}
-        <a href="/challenge_Dashboard/{{challenge}}">{{challenge}}</a>
+        <a class="link-box" href="/challenge/{{challenge}}">
+            <div class="challenge-box">
+                <h2>{{challenge}}</h2>
+            </div>
+        </a>
         {% endfor %}
-    </div>
+    </div>    
 </div>
 {% endblock %}
