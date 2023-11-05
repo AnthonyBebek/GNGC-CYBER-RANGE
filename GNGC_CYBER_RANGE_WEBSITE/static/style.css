@@ -368,3 +368,15 @@ input{
   border: 2px solid #fff;
   color: white;
 }
+.correct {
+  margin-top: 15%;
+  margin-left: 10%;
+}
+.correct h1 {
+  color: #fff;
+  font-size: 60px;
+}
+.correct h2 {
+  color: #fff;
+  font-size: 50px;
+}

@@ -157,6 +157,7 @@ def dashboard():
 @app.route('/challenge_Dashboard/<category>', methods = ['POST','GET'])
 @login_required
 def challengeDash(category):
+
     challengeList = []
     challengeList = challenge_info.get_challenges(category)
     return render_template('challengeDash.html', challengeList = challengeList)
@@ -172,20 +173,19 @@ def challenge(challenge):
         challengeAnswer = request.form['challengeAnswer']
 
         if challengeAnswer == challengeinf[3]:
-            return redirect(url_for('correct'))
+            return redirect(url_for('correct', challenge = challenge))
         else:
             flash(challengeinf[2])
 
     return render_template('challenge.html', challengeinf = challengeinf)
 
-@app.route('/correct')
+@app.route('/correct/<challenge>', methods = ['POST','GET'])
 @login_required
-def correct():
+def correct(challenge):
+
     challenge = challenge_info.get_challenge_settings(challenge)
     challenge = list(challenge.values())
-    correctMsg = challenge[3]
-    print(correctMsg)
-    return render_template('correct.html')
+    return render_template('correct.html', challenge = challenge)
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=True)

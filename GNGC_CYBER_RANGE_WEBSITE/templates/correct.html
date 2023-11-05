@@ -5,6 +5,10 @@ window.setTimeout(function(){
     location.href = "{{ url_for('dashboard') }}"; 
 }, 3000); 
 </script>
-
-    <h1>Correct, You Win!!!</h1>
+    <div class="category-container">
+        <div class="correct">
+            <h1>Correct, You Win!!!</h1><br>
+            <h2>{{challenge[4]}}</h2>
+        </div>
+    </div>
 {% endblock %}
