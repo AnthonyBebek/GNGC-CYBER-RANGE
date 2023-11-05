@@ -12,6 +12,7 @@ import string
 
 app = Flask(__name__)
 
+#making a secret key random to randomise the CRF key
 def randomstring(length):
     letters = string.ascii_lowercase
     resultstr = ''.join(random.choice(letters) for i in range(length))
@@ -21,6 +22,7 @@ ses = SessionLocal()
 app.secret_key = randomstring(64)
 login_manager = LoginManager()
 login_manager.init_app(app)
+#this is to make the files work between directories
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 sys.path.append(PROJECT_ROOT)
 
@@ -46,7 +48,7 @@ def utility_functions():
 @app.route('/')
 def index():
     pageName = 'Home'
-    #If the user didn'
+    #If the user didn't sign in they are kicked out
     if current_user.is_authenticated:
         logout_user()
 
@@ -99,7 +101,8 @@ def signup():
         
         else:
             print('all fields sumbitted something')
-
+        #I used a new method for validating emails with a function now, it might not work with schoolsnet but 
+        #it should be easy to fix
         is_valid = validate_email(userMail)  
         if is_valid:
             print('Valid Email')
@@ -143,7 +146,8 @@ def dashboard():
 
     categoryList = []
     challengsfile = "./Admin_Settings.json"
-
+    #I wanted to try something different to just using databases so I tried to use json
+    #this was the first method, and the second is below. 
     with open(challengsfile, "r", encoding="utf-8") as file:
         settings = json.load(file)
 
@@ -159,6 +163,7 @@ def dashboard():
 def challengeDash(category):
 
     challengeList = []
+    #this is the second method which uses a script file
     challengeList = challenge_info.get_challenges(category)
     return render_template('challengeDash.html', challengeList = challengeList)
 
@@ -182,7 +187,7 @@ def challenge(challenge):
 @app.route('/correct/<challenge>', methods = ['POST','GET'])
 @login_required
 def correct(challenge):
-
+    
     challenge = challenge_info.get_challenge_settings(challenge)
     challenge = list(challenge.values())
     return render_template('correct.html', challenge = challenge)
