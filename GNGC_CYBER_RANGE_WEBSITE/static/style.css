@@ -342,7 +342,24 @@ input{
   color: #fff;
 }
 .challenge-crate {
-
+  position: absolute;
+  background-color: #1F3442;
+  left: 25%;
+  top: 15%;
+  color: #fff;
+  padding: 50px;
+  border-radius: 10px;
+}
+.submitbutton {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer; 
 }
 .challenge-hint {
   padding: 20px;
