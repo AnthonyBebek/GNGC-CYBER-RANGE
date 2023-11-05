@@ -1,74 +1,90 @@
 {
   "Categories": {
     "Using_CLI": {
-      "Challenge 4": {
+      "Challenge 1": {
         "Challenge_name": "Listing Files",
         "Description": "There are some files in your home directory, what's the command to see them?",
         "Note": "Google is your friend",
-        "Answer": "ls"
+        "Answer": "ls",
+        "CorrectMsg":"First one done!"
+      },
+      "Challenge 2": {
+        "Challenge_name": "Hidden Files",
+        "Description": "How do you look at Hidden files in your directory?",
+        "Note": "Commands have multiple (-a)rguments", 
+        "Answer": "ls -a",
+        "CorrectMsg":"You can finally see all!"
+      },
+      "Challenge 3": {
+        "Challenge_name": "File Permissions",
+        "Description": "How do you check the permissions you have on files?",
+        "Note": "The ls command may guide you",
+        "Answer": "ls -l",
+        "CorrectMsg":"You can finally do all!!"
+      },
+      "Challenge 4": {
+        "Challenge_name": "Travel Around",
+        "Description": "whattwo letter command is it to move through directories in temrinal?",
+        "Note": "Google is your friend",
+        "Answer": "cd",
+        "CorrectMsg":"You are freeeeeeee!!"
       },
       "Challenge 5": {
-        "Challenge_name": "Hidden Files",
-        "Description": "There are some hidden files in this directory, what's the name of the hidden file?",
-        "Note": "Commands have multiple arguments", 
-        "Answer": "hello.txt"
-      },
-      "Challenge 6": {
-        "Challenge_name": "File Permissions",
-        "Description": "Some files have different permissions, what are the permissions for the hello.txt file?",
-        "Note": "The ls command may guide you",
-        "Answer": "rwxrwx---"
-      },
-      "Challenge 7": {
-        "Challenge_name": "Travel Around",
-        "Description": "There is a folder in your home direcotry, open it. Whats the name of the file in there?",
-        "Note": "Google is your friend",
-        "Answer": "CTF{001}.txt"
-      },
-      "Challenge 8": {
         "Challenge_name": "Absolute Directory",
         "Description": "What's the command to get into your root direcotry?",
         "Note": "Google is your friend",
-        "Answer": "cd /"
+        "Answer": "cd /",
+        "CorrectMsg":"Going to the root!!"
+
       },
-      "Challenge 9": {
+      "Challenge 6": {
         "Challenge_name": "Going Home",
         "Description": "What's the command to get back into your home directory?",
         "Note": "Just google it",
-        "Answer": "CD ~"
+        "Answer": "cd ~",
+        "CorrectMsg":"Welcome Home!!"
+      },
+      "Challenge 7": {
+        "Challenge_name": "Making Folders",
+        "Description": "How do you make a folder?",
+        "Note": "Make Directory is the full form",
+        "Answer": "mkdir",
+        "CorrectMsg":"Make some magic!!"
+      },
+      "Challenge 8": {
+        "Challenge_name": "Deleting Folders",
+        "Description": "How do you make a folder?",
+        "Note": "Remove Directory (Make sure its for an Empty folder)",
+        "Answer": "rmdir",
+        "CorrectMsg":"Ok take the magic away now."
+      },
+      "Challenge 9": {
+        "Challenge_name": "Deleting Folders 2",
+        "Description": "How do you make a folder?",
+        "Note": "Remove Directory (If its full)",
+        "Answer": "rm",
+        "CorrectMsg":"Taking away the magic one step at a time."
       },
       "Challenge 10": {
-        "Challenge_name": "More Cat or Less",
-        "Description": "There is some hidden text in this image, what is it?",
-        "Note": "The name of this challange may be important",
-        "Answer": "CTF{CATZ-AR3-C00L}"
-      },
-      "Challenge 11": {
-        "Challenge_name": "Dumping Hex"
-        
-        
-      },
-      "Challenge 12": {
-        "Challenge_name": "String Theory"
-      },
-      "Challenge 13": {
-        "Challenge_name": "Unknown File"
-      },
-      "Challenge 14": {
-        "Challenge_name": "Matryoshka Doll"
-      },
-      "Challenge 15": {
-        "Challenge_name": "Fix Me"
-      },
-      "Challenge 16": {
-        "Challenge_name": "Redirection"
+        "Challenge_name": "Threads",
+        "Description": "How do you get the printable strings in a file?",
+        "Note": "Its in the question!",
+        "Answer": "strings",
+        "CorrectMsg":"Stringy"
       }
     },
     "Networking": {
       "Challenge 1": {
-        "Challenge_name": "Networking Concepts",
-        "IP": "192.168.30.4",
-        "Port": 12345
+        "Challenge_name": "IP Addresses",
+        "Description": "What is the command for showing your IP?",
+        "Note": "If config is correct?",
+        "Answer": "ifconfig"
+      },
+      "Challenge 2": {
+        "Challenge_name": "Default Gateway",
+        "Description": "What is your default gateway?",
+        "Note": "read carefully through ifconfig",
+        "Answer": "192.168.30.1"
       }
     },
     "Programming": {
@@ -77,11 +93,6 @@
         "IP": "192.168.30.5",
         "Port": 5000
       }
-    }
-  },
-  "login details": {
-    "Support Email": {
-      
     }
   }
 }

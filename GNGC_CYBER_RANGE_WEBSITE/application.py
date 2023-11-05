@@ -181,6 +181,10 @@ def challenge(challenge):
 @app.route('/correct')
 @login_required
 def correct():
+    challenge = challenge_info.get_challenge_settings(challenge)
+    challenge = list(challenge.values())
+    correctMsg = challenge[3]
+    print(correctMsg)
     return render_template('correct.html')
 
 if __name__ == '__main__':
