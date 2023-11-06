@@ -199,4 +199,4 @@ def correct(challenge):
     return render_template('correct.html', challenge = challenge)
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", debug=True)
+    app.run(host="0.0.0.0", port=int('80'), debug=True)
