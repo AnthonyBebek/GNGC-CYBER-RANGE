@@ -115,7 +115,7 @@ def signup():
             flash('Passwords were not the same... Try again')
             return redirect(url_for('signup'))
         
-        hasheduserPass = generate_password_hash(userPass, method='md5')
+        hasheduserPass = generate_password_hash(userPass, method='sha256')
         print('password hashed')
         
         try:
@@ -182,7 +182,7 @@ def challenge(challenge):
         else:
             flash(challengeinf[2])
 
-    return render_template('challenge.html', challengeinf = challengeinf)
+    return render_template('challenge.html', challengeinf = challengeinf, challenge = challenge)
 
 @app.route('/correct/<challenge>', methods = ['POST','GET'])
 @login_required
