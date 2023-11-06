@@ -1,5 +1,7 @@
 {% extends 'ChallengeBase.html' %}
 {% block content %}
+<!-- this is a little bit of javascript for the website to have the correct display for 2.5 seconds
+and then go back to dashboard -->
 <script>
 window.setTimeout(function(){
     location.href = "{{ url_for('dashboard') }}"; 

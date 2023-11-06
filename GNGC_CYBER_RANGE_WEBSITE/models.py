@@ -2,9 +2,10 @@ from sqlalchemy import (String,
 Column,
 Boolean,
 Integer)
-from sqlalchemy.ext.associationproxy import association_proxy
 from database import *
-from sqlalchemy.orm import relationship
+
+#Because of sqlalchemy I don't needto learn a new format for configuring the database and instead I can do it all on python. 
+#this is good. 
 
 class Users(Base):
     __tablename__ = "Users"
@@ -26,6 +27,8 @@ class Users(Base):
     def is_active(self):
         return str(self.userId)
 
+#I don't this does anything but it acts as a good base for when users want to store their progress
+#this was supposed to be implimented but I just ran out of time. 
 class Challenge(Base):
     __tablename__ = "Challenge"
     challengeId = Column(Integer, primary_key=True, autoincrement=True, nullable=False)

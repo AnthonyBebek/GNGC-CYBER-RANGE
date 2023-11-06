@@ -1,3 +1,5 @@
+#this is a file for when we were looking at how to ping from our network
+#we didn't end up doing this because of some difficulties with the network. 
 import time
 import threading
 import socket

@@ -2,12 +2,16 @@
 {% block content %}
 <div class="category-container">
     <div class="challenge-crate">
+        <!-- Here using the challengeinf package that is sent over in the kwarg I set the title and other info -->
         <h1>{{challengeinf[0]}}</h1><br>
         <p>{{challengeinf[1]}}</p>
+        <!-- the form for submitting questions -->
         <form action="/challenge/{{challengeinf[0]}}" method="post">
             <input type="text" placeholder="Insert Answer Here" name="challengeAnswer">
             <button class="submitbutton">Submit</button>
         </form>
+        <!-- this is for flashing the hint, its set as a span because I wanted to make it highlighted but it looked fine in normal form
+        also I had been working with css for hours and I just did not want to do it. -->
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
