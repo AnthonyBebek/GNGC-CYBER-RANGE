@@ -37,7 +37,7 @@ install_python_dependencies() {
     echo "Installing Python dependencies..."
     python3 -m pip install flask --break-system-packages
     python3 -m pip install flask_login --break-system-packages
-    python3 -m pip install werkzeug --break-system-packages
+    python3 -m pip install bcrypt --break-system-packages
     python3 -m pip install sqlalchemy --break-system-packages
     python3 -m pip install re --break-system-packages
     python3 -m pip install validate_email --break-system-packages

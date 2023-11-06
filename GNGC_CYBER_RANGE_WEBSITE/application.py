@@ -5,6 +5,7 @@ from validate_email import validate_email
 import json
 import os
 import sys
+import bcrypt
 from werkzeug.security import generate_password_hash, check_password_hash
 from models import *
 import random
@@ -54,38 +55,6 @@ def index():
 
     return render_template('index.html', pageName = pageName)
 
-@app.route('/login', methods = ['POST','GET'])
-def login():
-
-    if request.method == 'POST':
-        studentId = request.form['studentId']
-        userPass = request.form['userPass']
-
-        if not studentId or not userPass:
-            flash('You did not enter a Username or Password')
-            return redirect(url_for('login'))
-        else:
-            User = ses.query(Users).filter_by(studentId = studentId).first()
-
-            if not User:
-                flash('Invalid Student ID or Password')
-                return redirect(url_for('login'))
-            if not userPass:
-                flash('Invalid Student ID or Password')
-            if not check_password_hash(User.userPass, userPass):
-                flash('Invalid Username or Password')
-                return redirect(url_for('login'))        
-            
-            login_user(User)
-            next = request.args.get('next')
-            if not is_safe_url(next):
-                return abort(400)
-
-            session.permanent = True
-            session['User'] = User.userId
-            return redirect(next or url_for('dashboard'))
-    return render_template('login.html')
-
 @app.route('/signup', methods = ['POST','GET'])
 def signup():
     if request.method == 'POST':
@@ -114,10 +83,9 @@ def signup():
         if userPass != userConfPass:
             flash('Passwords were not the same... Try again')
             return redirect(url_for('signup'))
-        
-        hasheduserPass = generate_password_hash(userPass, method='sha256')
+        salt = bcrypt.gensalt()
+        hasheduserPass = bcrypt.hashpw(userPass.encode('utf8'), salt)
         print('password hashed')
-        
         try:
             User = Users(userName = userName, studentId = studentId, userMail = userMail, userPass = hasheduserPass)
             ses.add(User)
@@ -131,6 +99,44 @@ def signup():
             ses.rollback()
 
     return render_template('signup.html')
+
+@app.route('/login', methods = ['POST','GET'])
+def login():
+
+    if request.method == 'POST':
+        studentId = request.form['studentId']
+        userPass = request.form['userPass']
+
+        if not studentId or not userPass:
+            flash('You did not enter a Username or Password')
+            return redirect(url_for('login'))
+        else:
+            User = ses.query(Users).filter_by(studentId = studentId).first()
+
+            if not User:
+                flash('Invalid Student ID or Password')
+                return redirect(url_for('login'))
+            if not userPass:
+                flash('Invalid Student ID or Password')
+
+            userPass = userPass.encode('utf-8')
+            User.userPass = User.userPass.encode('utf-8')
+
+            if not bcrypt.checkpw(userPass, User.userPass):
+                flash('Invalid Username or Password')
+                return redirect(url_for('login'))        
+            
+            login_user(User)
+            next = request.args.get('next')
+            if not is_safe_url(next):
+                return abort(400)
+
+            session.permanent = True
+            session['User'] = User.userId
+            return redirect(next or url_for('dashboard'))
+    return render_template('login.html')
+
+
 
 @app.route('/logout', methods = ['POST','GET'])
 @login_required
