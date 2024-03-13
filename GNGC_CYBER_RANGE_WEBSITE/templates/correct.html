@@ -1,0 +1,16 @@
+{% extends 'ChallengeBase.html' %}
+{% block content %}
+<!-- this is a little bit of javascript for the website to have the correct display for 2.5 seconds
+and then go back to dashboard -->
+<script>
+window.setTimeout(function(){
+    location.href = "{{ url_for('dashboard') }}"; 
+}, 2500); 
+</script>
+    <div class="category-container">
+        <div class="correct">
+            <h1>Correct, You Win!!!</h1><br>
+            <h2>{{challenge[4]}}</h2>
+        </div>
+    </div>
+{% endblock %}

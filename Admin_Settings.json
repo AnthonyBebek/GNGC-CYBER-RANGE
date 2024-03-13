@@ -1,62 +1,98 @@
 {
-    "Challenges": {
-
-      "Command Line": {
-
-        "Challange 1": {
-          "Challange_name": "Basic Commands",
-          "IP": "192.168.30.1",
-          "Port": 3306
-        }
+  "Categories": {
+    "Using_CLI": {
+      "Challenge 1": {
+        "Challenge_name": "Listing Files",
+        "Description": "There are some files in your home directory, what's the command to see them?",
+        "Note": "Google is your friend",
+        "Answer": "ls",
+        "CorrectMsg":"First one done!"
       },
-      "Web Challenges": {
-
-        "Challange 1": {
-          "Challange_name": "Web Basics",
-          "IP": "192.168.30.2",
-          "Port": 8080
-        }
+      "Challenge 2": {
+        "Challenge_name": "Hidden Files",
+        "Description": "How do you look at Hidden files in your directory?",
+        "Note": "Commands have multiple (-a)rguments", 
+        "Answer": "ls -a",
+        "CorrectMsg":"You can finally see all!"
       },
-      "OINST Challenges": {
-
-        "Challange 1": {
-          "Challange_name": "Operating Systems",
-          "IP": "192.168.30.3",
-          "Port": 5555
-        }
+      "Challenge 3": {
+        "Challenge_name": "File Permissions",
+        "Description": "How do you check the permissions you have on files?",
+        "Note": "The ls command may guide you",
+        "Answer": "ls -l",
+        "CorrectMsg":"You can finally do all!!"
       },
-      "Networking Challenges": {
-
-        "Challange 1": {
-          "Challange_name": "Networking Concepts",
-          "IP": "192.168.30.4",
-          "Port": 12345
-        }
+      "Challenge 4": {
+        "Challenge_name": "Travel Around",
+        "Description": "whattwo letter command is it to move through directories in temrinal?",
+        "Note": "Google is your friend",
+        "Answer": "cd",
+        "CorrectMsg":"You are freeeeeeee!!"
       },
-      "Programming Challenges": {
+      "Challenge 5": {
+        "Challenge_name": "Absolute Directory",
+        "Description": "What's the command to get into your root direcotry?",
+        "Note": "Google is your friend",
+        "Answer": "cd /",
+        "CorrectMsg":"Going to the root!!"
 
-        "Challange 1": {
-          "Challange_name": "Python Basics",
-          "IP": "192.168.30.5",
-          "Port": 5000
-        }
       },
-      "Digital Forensics Challenges": {
-
-        "Challange 1": {
-          "Challange_name": "Forensics Fundamentals",
-          "IP": "192.168.30.6",
-          "Port": 9999
-        }
+      "Challenge 6": {
+        "Challenge_name": "Going Home",
+        "Description": "What's the command to get back into your home directory?",
+        "Note": "Just google it",
+        "Answer": "cd ~",
+        "CorrectMsg":"Welcome Home!!"
       },
-      "Cryptography Challenges": {
-        
-        "Challange 1": {
-          "Challange_name": "Cryptography 101",
-          "IP": "192.168.30.7",
-          "Port": 7777
-        }
+      "Challenge 7": {
+        "Challenge_name": "Making Folders",
+        "Description": "How do you make a folder?",
+        "Note": "Make Directory is the full form",
+        "Answer": "mkdir",
+        "CorrectMsg":"Make some magic!!"
+      },
+      "Challenge 8": {
+        "Challenge_name": "Deleting Folders",
+        "Description": "How do you make a folder?",
+        "Note": "Remove Directory (Make sure its for an Empty folder)",
+        "Answer": "rmdir",
+        "CorrectMsg":"Ok take the magic away now."
+      },
+      "Challenge 9": {
+        "Challenge_name": "Deleting Folders 2",
+        "Description": "How do you make a folder?",
+        "Note": "Remove Directory (If its full)",
+        "Answer": "rm",
+        "CorrectMsg":"Taking away the magic one step at a time."
+      },
+      "Challenge 10": {
+        "Challenge_name": "Threads",
+        "Description": "How do you get the printable strings in a file?",
+        "Note": "Its in the question!",
+        "Answer": "strings",
+        "CorrectMsg":"Stringy"
+      }
+    },
+    "Networking": {
+      "Challenge 1": {
+        "Challenge_name": "IP Addresses",
+        "Description": "What is the command for showing your IP?",
+        "Note": "If config is correct?",
+        "Answer": "ifconfig"
+      },
+      "Challenge 2": {
+        "Challenge_name": "Default Gateway",
+        "Description": "What is your default gateway?",
+        "Note": "read carefully through ifconfig",
+        "Answer": "192.168.30.1"
+      }
+    },
+    "Programming": {
+      "Challenge 1": {
+        "Challenge_name": "Python Basics",
+        "IP": "192.168.30.5",
+        "Port": 5000
       }
     }
   }
-  
+}
