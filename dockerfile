@@ -33,7 +33,7 @@ COPY . /root/GNGC-CYBER-RANGE
 WORKDIR /root/GNGC-CYBER-RANGE
 
 # Run the auto setup
-RUN chmod +x autosetup.sh && ./autosetup.sh
+RUN chmod +x autosetup.sh && bash autosetup.sh
 
 # Expose ports if needed
 EXPOSE 80
