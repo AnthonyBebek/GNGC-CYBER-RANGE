@@ -177,7 +177,9 @@ sudo docker run hello-world
 
 4. Run the docker image with ```docker run -p 80:80 -p 443:443 --name gngc-cyber cyber-range```
 
-5. Navigate to https://localhost and the server will be up
+5. Navigate to https://localhost and the server will be up 
+
+You may need to reboot the PC and try step 4 again if you are not getting a responce at https://localhost as docker sometimes forgets to map ports correctly
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
