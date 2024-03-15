@@ -37,7 +37,7 @@ RUN chmod +x autosetup.sh && bash autosetup.sh
 
 # Expose ports if needed
 EXPOSE 80
-# EXPOSE 8080
+EXPOSE 443
 
 # Start your service
 CMD service mariadb start && sudo bash start.sh && bash

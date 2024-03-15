@@ -175,7 +175,7 @@ sudo docker run hello-world
 
 3. Build the docker image with ```docker build -t cyber-range .``` This might take a while
 
-4. Run the docker image with ```docker run -p 80:80 --name gngc-cyber cyber-range```
+4. Run the docker image with ```docker run -p 80:80 -p 443:443 --name gngc-cyber cyber-range```
 
 5. Navigate to https://localhost and the server will be up
 
