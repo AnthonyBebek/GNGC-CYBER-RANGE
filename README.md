@@ -102,55 +102,82 @@ Om Vedanti
 
 ### Prerequisites
 
-Run these commands before running anything else
-```sh
-sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:deadsnakes/ppa
+#### Docker
+We use docker to run the server files, to keep these services seperate from the host machine, this provides an extra layer of security and makes it easier to deploy.
+
+#### Installing Docker On Windows
+1. Visit the official Docker website: https://www.docker.com/products/docker-desktop
+
+2. Click on the "Download for Windows" button to download the Docker Desktop installer.
+
+3. Once the installer is downloaded, double-click on it to start the installation process.
+
+4. Follow the on-screen instructions to complete the installation.
+
+5. During installation, Docker Desktop might require enabling certain features or restarting your system. Follow the prompts accordingly.
+
+6. Verify installation by running the command ```docker --version``` in command prompt
+
+#### Installing Docker On Linux
+
+This method can also be found on the offical docker website.
+<a href = "https://docs.docker.com/engine/install/ubuntu/"> Found here </a>
+
+1. Setup Docker's ```apt``` repository by running the following commands
+```
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 ```
+2. Install docker with this command
+```
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+3. Check docker is installed with
+```
+sudo docker run hello-world
+```
 
-* Python
-  ```sh
-  sudo apt-get install python3.8
-  ```
+#### Git
 
-* Git
-  ```sh
-  sudo apt install git
-  ```
+#### Install for Windows
+
+1. Visit the official git website: https://git-scm.com/download/win
+
+2. Click on the "Click here to download" button to download git.
+
+3. Once the installer is downloaded, double-click on it to start the installation process.
+
+4. Follow the on-screen instructions to complete the installation.
+
+5. During installation, git might require enabling certain features or restarting your system. Follow the prompts accordingly.
+
+#### Install for linux
+
+1. Run the following command 
+``` sudo apt install git-all ```
 
 ### Installation
 
-Installing this system assumes that you don't have mariaDB already installed on your system. 
+#### Installing on Windows / Linux
 
-1. Clone the repo
-    ``` sh
-    git clone https://github.com/AnthonyBebek/GNGC-CYBER-RANGE
-    ```
+1. Open up a command prompt window or temrinal and navigate to where you want to clone this repo to
 
-2. Run the setup file
-    ``` sh
-    cd ./GNGC-CYBER-RANGE
-    bash setup.bash
-    ```
+2. Run the following command ``` git clone https://github.com/AnthonyBebek/GNGC-CYBER-RANGE .```
 
-    Type Y to each prompt to install the setup correctly, if there is an error, report the issue here  <a href="https://github.com/AnthonyBebek/GNGC-CYBER-RANGE/issues">Report Bug</a>
+3. Build the docker image with ```docker build -t cyber-range .``` This might take a while
 
-3. Check the setup was ran correctly
-    ``` sh
-    bash setupcheck.bash
-    ```
-    If there was an error with a repository, report the issue here  <a href="https://github.com/AnthonyBebek/GNGC-CYBER-RANGE/issues">Report Bug</a>
+4. Run the docker image with ```docker run -p 80:80 --name gngc-cyber cyber-range```
 
-4. Run the server
-    ``` sh
-    bash start.sh
-    ```
-
-5. Stop the server with
-    ``` sh
-    bash stop.sh
-    ```
+5. Navigate to https://localhost and the server will be up
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -159,11 +186,39 @@ Installing this system assumes that you don't have mariaDB already installed on 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-This server was written for Gungahlin College, how to use this system can be found within the supplied documentation. 
+This system was built for Gungahlin College, on infomation about maintaining the network, refer to the provided documentation. 
+
+Be sure to contact the main contributers if there is an issue with the network or this server.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+<!-- Images -->
+## Images of Network
+
+This system was designed for Gungahlin College as a year 12 final project. Here are some photos of the development of the system.
+
+### Server & Intermediary Setup
+
+![alt text](Readme_Files/Server&Intermediary.png)
+
+### Client Setup
+
+![alt text](Readme_Files/Client-Setup.png)
+
+### Network Setup
+
+![alt text](Readme_Files/Network-Setup.png)
+
+### Cloning Software
+
+![alt text](Readme_Files/Cloning-Software.png)
+
+### Fog Setup
+
+![alt text](Readme_Files/Fog-Setup.png)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ROADMAP -->
 ## Roadmap

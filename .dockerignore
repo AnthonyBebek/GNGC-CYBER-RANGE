@@ -1,0 +1,7 @@
+#These are the files that are not cloned by docker
+
+./Readme_Files
+*.md
+.gitignore
+dockerfile
+.vscode
