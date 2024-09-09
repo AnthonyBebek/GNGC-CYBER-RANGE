@@ -160,9 +160,16 @@ sudo docker run hello-world
 1. Run the following command 
 ``` sudo apt install git-all ```
 
-### Installation
+### Installation on Windows / Linux (DHCP, DNS and other used services)
 
-#### Installing on Windows / Linux
+1. Open up a command prompt window or temrinal and navigate to where you want to clone this repo to
+
+2. Run the following command ``` git clone https://github.com/AnthonyBebek/GNGC-CYBER-RANGE .```
+
+3. Build the docker image with other services with ```docker-compose up --build```
+
+
+#### Alternate Install on Windows / Linux (No other services)
 
 1. Open up a command prompt window or temrinal and navigate to where you want to clone this repo to
 
