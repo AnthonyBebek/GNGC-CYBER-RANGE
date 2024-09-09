@@ -4,6 +4,4 @@
 __pycache__/
 *.pyc
 Dev-deploy.bat
-etc-dnsmasq.d/
-etc-pihole/
 
