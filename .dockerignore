@@ -5,3 +5,5 @@
 .gitignore
 dockerfile
 .vscode
+./etc-dnsmas1.d
+./etc-pihole
