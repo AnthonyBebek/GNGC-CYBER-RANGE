@@ -2,14 +2,15 @@
 FROM ubuntu
 
 # Update apt to latest
-RUN apt-get update
+RUN apt update
 
 # Install necessary packages
-RUN apt-get install -y \
+RUN apt install -y \
     git \
     openssh-server \
     iproute2 \
     sudo \
+    python3 \
     python3-pip \
     mariadb-server \
     iputils-ping \
@@ -32,8 +33,10 @@ COPY . /root/GNGC-CYBER-RANGE
 # Change directory
 WORKDIR /root/GNGC-CYBER-RANGE
 
+RUN bash autosetup.sh
+
 # Run the auto setup
-RUN chmod +x autosetup.sh && bash autosetup.sh
+#RUN chmod +x autosetup.sh && bash autosetup.sh
 
 # Expose ports if needed
 EXPOSE 80

@@ -4,7 +4,6 @@ flask_app_dir="$HOME/GNGC-CYBER-RANGE/GNGC_CYBER_RANGE_WEBSITE/"
 domain_name="GNGC-CYBER-RANGE"
 apache_virtualhost_dir="/etc/apache2/sites-available/"
 
-sudo apt-get update
 sudo apt-get install -y apache2-dev
 python3 -m pip install mod_wsgi
 
@@ -39,4 +38,4 @@ EOF
 sudo a2ensite ${domain_name}.conf
 sudo systemctl reload apache2
 
-echo "Apache setup for Flask app is complete. Your app should now be accessible via http://${domain_name}/"
+echo "Apache setup for Flask app is complete. App should now be accessible via http://${domain_name}/"
